@@ -19,6 +19,10 @@ app.get("/", (req, res) => {
   res.send("home");
 });
 
+app.get("/proba", (req, res) => {
+  res.send("proba");
+});
+
 app.post("/codes", async (req, res) => {
   if (req.body.length) {
     let codes = await Codes.find({ code: { $in: req.body } });
