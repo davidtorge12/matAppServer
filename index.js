@@ -11,16 +11,12 @@ const app = express();
 app.use(cors());
 const port = process.env.PROT || 3000;
 
-mongoose.connect("mongodb+srv://matUser:matUser123@matapp.5r9058l.mongodb.net/matapp");
+mongoose.connect(process.env.MONGO_DB_URL);
 
 app.use(express.json());
 
 app.get("/", (req, res) => {
   res.send("home");
-});
-
-app.get("/proba", (req, res) => {
-  res.send("proba");
 });
 
 app.post("/codes", async (req, res) => {
