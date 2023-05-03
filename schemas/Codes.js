@@ -10,7 +10,7 @@ const codesSchema = new mongoose.Schema({
   price: String,
   createdAt: { type: Date, default: () => Date.now() },
   updatedAt: { type: Date, default: () => Date.now() },
-  materials: String
+  materials: String,
 });
 
 const CodesModel = mongoose.model("Codes", codesSchema);

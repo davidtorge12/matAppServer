@@ -21,7 +21,46 @@ app.get("/", (req, res) => {
 
 app.post("/codes", async (req, res) => {
   if (req.body.length) {
-    let codes = await Codes.find({ code: { $in: req.body } });
+    req.body.forEach(async (c) => {
+      let codeInDb = await Codes.findOne({ code: c.code });
+
+      if (codeInDb && codeInDb.description !== c.description) {
+        await Codes.updateOne({ description: c.description }).updateOne({
+          materials: c.materials !== "" ? c.materials : codeInDb.materials,
+        });
+      } else {
+        await Codes.create({ code: c.code, description: c.description, materials: "" });
+      }
+    });
+
+    const codesArr = req.body.reduce((acc, val) => {
+      return [...acc, val.code];
+    }, []);
+
+    let codes = [];
+
+    // codesArr.forEach(async (cod) => {
+    //   console.log(cod);
+    //   const codeToAdd = await Codes.findOne({ code: cod });
+    //   if (codeToAdd) {
+    //     console.log(codeToAdd)
+    //     codes.push(codeToAdd);
+    //   }
+    // });
+
+    for await (let cod of codesArr) {
+      console.log(cod);
+      const codeToAdd = await Codes.findOne({ code: cod });
+      if (codeToAdd) {
+        // console.log(codeToAdd);
+        codes = [...codes, codeToAdd];
+      }
+    }
+
+    // console.log(codes);
+
+    // let codes = await Codes.findOne({ code: { $in: codesArr } });
+
     res.send(codes);
   }
 });
@@ -29,7 +68,6 @@ app.post("/codes", async (req, res) => {
 app.get("/latest", async (req, res) => {
   let codes = await Codes.find({}).sort({ updatedAt: -1 }).limit(20);
 
-  console.log(codes);
   res.send(codes);
 });
 
@@ -37,7 +75,11 @@ app.post("/code", async (req, res) => {
   if (req.body.param) {
     const { id, materials } = req.body.param;
 
-    await Codes.findOne({ _id: id }).updateOne({ materials: materials }).updateOne({ updatedAt: Date.now() });
+    const code = Codes.findOne({ _id: id });
+
+    if (code) {
+      await code.updateOne({ materials: materials }).updateOne({ updatedAt: Date.now() });
+    }
 
     const updated = await Codes.find({ _id: id });
     res.send(updated);
@@ -47,7 +89,6 @@ app.post("/code", async (req, res) => {
 const run = async () => {
   await Codes.updateOne({ _id: "63e63a68388ef1d5649c03cc" }, { updatedAt: Date.now() });
   const doc = await Codes.find({ _id: "63e63a68388ef1d5649c03cc" });
-  console.log(doc);
 };
 
 // run();
