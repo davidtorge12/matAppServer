@@ -39,27 +39,12 @@ app.post("/codes", async (req, res) => {
 
     let codes = [];
 
-    // codesArr.forEach(async (cod) => {
-    //   console.log(cod);
-    //   const codeToAdd = await Codes.findOne({ code: cod });
-    //   if (codeToAdd) {
-    //     console.log(codeToAdd)
-    //     codes.push(codeToAdd);
-    //   }
-    // });
-
     for await (let cod of codesArr) {
-      console.log(cod);
       const codeToAdd = await Codes.findOne({ code: cod });
       if (codeToAdd) {
-        // console.log(codeToAdd);
         codes = [...codes, codeToAdd];
       }
     }
-
-    // console.log(codes);
-
-    // let codes = await Codes.findOne({ code: { $in: codesArr } });
 
     res.send(codes);
   }
