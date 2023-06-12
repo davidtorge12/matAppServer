@@ -21,43 +21,47 @@ app.get("/", (req, res) => {
 });
 
 app.post("/codes", async (req, res) => {
-  if (req.body.length) {
-    req.body.forEach(async (c) => {
-      let codeInDb = await Codes.findOne({ code: c.code });
+  try {
+    if (req.body.length) {
+      req.body.forEach(async (c) => {
+        let codeInDb = await Codes.findOne({ code: c.code });
 
-      if (codeInDb) {
-        if (codeInDb.description !== c.description) {
-          await Codes.updateOne({ description: c.description }).updateOne({
-            materials: c.materials !== "" ? c.materials : codeInDb.materials,
-          });
+        if (codeInDb) {
+          if (codeInDb.description !== c.description) {
+            await Codes.updateOne({ description: c.description }).updateOne({
+              materials: c.materials !== "" ? c.materials : codeInDb.materials,
+            });
+          } else {
+            await Codes.updateOne({
+              materials: c.materials !== "" ? c.materials : codeInDb.materials,
+            });
+          }
         } else {
-          await Codes.updateOne({
-            materials: c.materials !== "" ? c.materials : codeInDb.materials,
+          await Codes.create({
+            code: c.code,
+            description: c.description,
+            materials: "",
           });
         }
-      } else {
-        await Codes.create({
-          code: c.code,
-          description: c.description,
-          materials: "",
-        });
+      });
+
+      const codesArr = req.body.reduce((acc, val) => {
+        return [...acc, val.code];
+      }, []);
+
+      let codes = [];
+
+      for await (let cod of codesArr) {
+        const codeToAdd = await Codes.findOne({ code: cod });
+        if (codeToAdd) {
+          codes = [...codes, codeToAdd];
+        }
       }
-    });
 
-    const codesArr = req.body.reduce((acc, val) => {
-      return [...acc, val.code];
-    }, []);
-
-    let codes = [];
-
-    for await (let cod of codesArr) {
-      const codeToAdd = await Codes.findOne({ code: cod });
-      if (codeToAdd) {
-        codes = [...codes, codeToAdd];
-      }
+      res.send(codes);
     }
-
-    res.send(codes);
+  } catch (error) {
+    res.send("error", error);
   }
 });
 
