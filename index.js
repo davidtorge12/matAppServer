@@ -158,12 +158,24 @@ app.post("/set-price", async (req, res) => {
   }
 });
 
+app.post("/vo", async (req, res) => {
+  if (req.body.length) {
+    const voArr = req.body;
+
+    voArr.forEach(async (vo) => {
+      const oldInfo = await Codes.findOne({ code: vo.code }).info;
+      await Codes.updateOne(
+        { code: vo.code },
+        { info: vo.info || oldInfo || "" }
+      );
+    });
+
+    res.send("done");
+  }
+});
+
 const run = async () => {
-  await Material.create({
-    material: "material name",
-    price: "30",
-    updatedAt: Date.now(),
-  });
+  await Codes.updateMany({}, { info: "" });
 };
 
 // run();

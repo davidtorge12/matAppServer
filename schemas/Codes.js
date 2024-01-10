@@ -6,6 +6,7 @@ const codesSchema = new mongoose.Schema({
     required: true,
   },
   description: { type: String },
+  info: { type: String },
   unit: String,
   price: String,
   createdAt: { type: Date, default: () => Date.now() },
