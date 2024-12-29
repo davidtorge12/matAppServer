@@ -1,0 +1,1898 @@
+[
+  {
+    "id": "63e63a68388ef1d5649bf811",
+    "code": "027309",
+    "description": "HANDRAIL:RENEW MOPSTICK HANDRAIL Handrail:Renew or supply and fix new softwood mopstick handrail to existing brackets including all ends and refix handrail brackets including replugging if necessary, redecorate and make good.",
+    "materials": "1x handrail / check; 3x handrail holder"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bf830",
+    "code": "070109",
+    "description": "SHED LOCK:RENEW COMPLETE Shed Lock:Renew rimlock, keep and set of rimlock furniture to shed or bin store door, including altering door as necessary for new lock and housing out existing frame as necessary.",
+    "materials": "1x shed lock"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bf852",
+    "code": "017308",
+    "description": "FENCING:RENEW 1.2M WIDE PANEL Fencing:Renew any interwoven or overlap fence panel ne 1.20x1.80m fixed with galvanised metal support brackets to existing posts, remove and dismantle existing and remove spoil.",
+    "materials": "1x fence panel / check"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bf871",
+    "code": "017605",
+    "description": "FENCING:RENEW PALISADE NE 1.35M HIGH Fencing:Renew with or supply and fix timber palisade fence 1.35m high, with 100x100mm posts at ne 1.80m centres, 100x50mm rails, 75mm pales at 125mm centres excavation, concrete, backfill etc.",
+    "materials": "1x fence / check"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bf881",
+    "code": "019005",
+    "description": "FENCE POST:RENEW TIMBER TO HARDCORE OR CONCRETE Fence Post:Renew timber 100x100mm fence post set in hardcore or concrete ne 2.40m long, excavate hardcore and or concrete, backfill, remove refix fencing, remove spoil, reinstatement.",
+    "materials": "1 x fence post"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bf889",
+    "code": "021003",
+    "description": "GATE:RENEW TIMBER NE 1.5SM Gate:Renew timber single leaf gate ne 1.50sm overall, including galvanised steel strap hinges and hangers fixed to post, new galvanised mild steel auto catch, decorate, remove spoil.",
+    "materials": "1x gate fence / check"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bf931",
+    "code": "115001",
+    "description": "AIRBRICK:RENEW WITH PVC Airbrick:Cut out existing airbrick and renew with 225x150mm PVC ventilator, bed and point in cement lime mortar (1:1:6) and make good any finishes and remove waste and debris.",
+    "materials": "1x vent "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bf930",
+    "code": "114001",
+    "description": "WALL OR CEILING:APPLY ANTI-FUNGICIDE Wall or Ceiling:Brush down and apply anti-fungicide solution to walls and or ceilings and wash off traces of fungus and remove waste and debris.",
+    "materials": "flash rosu x 1"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bf937",
+    "code": "115011",
+    "description": "VENTILATOR:RENEW PVC OR ALUMINIUM Ventilator:Supply and fix 225x150mm Hit and Miss PVC or aluminium ventilator grille fixed to any background including remove any existing ventilator, make good to all finishes, remove spoil.",
+    "materials": "1x Vent "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bf974",
+    "code": "140009",
+    "description": "FIRE:REMOVE FIRE AND SEAL OPENING Fire:Take out fire, surround and hearth, seal opening with brickwork or blockwork, plaster vent, render and set wall, make good floor and skirting, and seal chimney cap and remove spoil.",
+    "materials": "X 1/ 2  plasterboard "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfa2a",
+    "code": "227005",
+    "description": "INSULATION:LAY UPTO 270MM THICK QUILT Insulation:Supply and lay new upto 270mm thick insulation quilt to loft area including gain access and moving/replacing contents within loft area in order to undertake work.",
+    "materials": "1x loft insulation "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfa56",
+    "code": "301303",
+    "description": "PARTITION:ERECT TIMBER STUD PLASTERBOARD SKIM BF Partition:Erect or renew stud partition comprising ne 50x100mm members fixed to walls, pack out and scribe, 12.5mm butt jointed plasterboard and 3mm plaster skim coat and all labours to both faces.",
+    "materials": "3x 2x2 timber; 1 x 12.5mm standard plasterboard 2400x1200"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfa6d",
+    "code": "303011",
+    "description": "SOFFIT:RENEW IN MASTERBOARD NE 450MM Soffit:Renew soffit board with masterboard ne 450mm wide including renew noggins as necessary fixed to roof timbers and refix cables and decorate to match existing.",
+    "materials": "1x masterboard "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfa7e",
+    "code": "305105",
+    "description": "FLOORING:SUPPLY AND LAY 4MM PLYWOOD Flooring:Supply and lay 4mm WBP plywood nailed to existing floorboard at 150mm centres with wired nails and level as necessary.",
+    "materials": "1x plywood / check "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfa7f",
+    "code": "305301",
+    "description": "FLOORING:RENEW IN 19MM CHIPBOARD Flooring:Renew any flooring with 19mm flooring grade V313 waterproof chipboard, denail joists, remove spoil, punch in nails, level to existing, make good, additional noggins/support battens.",
+    "materials": "1x chipboard 19mm"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfa84",
+    "code": "305703",
+    "description": "FLOORBOARD:RENEW ANY TYPE OVER 1.0SM Floorboard:Renew to match existing looring with 19mm T and G or square edged flooring, denail joists, punch in nails, level to existing, extra support noggins, make good, and remove waste and debris.",
+    "materials": "1x floorboards / check "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfadd",
+    "code": "315055",
+    "description": "WINDOW:RENEW TRICKLE WINDOW VENTILATOR Window:Renew or supply and install two part trickle window ventilator screwed to timber window, cut suitable sized aperture in window frame to suit ventilation requirements, make good.",
+    "materials": "1x trickle vent"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfaef",
+    "code": "318105",
+    "description": "WINDOW:RENEW TRICKLE VENT TO PVCU Window:Renew or repair any trickle vent to PVCu window.",
+    "materials": "1x white silicone "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfaf1",
+    "code": "318108",
+    "description": "WINDOW:RENEW LOCKING HANDLE TO PVCU Window:Renew any defective or broken locking handle to PVCu window including remove existing, check, lubricate operating mechanism, renew handle to match existing and test.",
+    "materials": "1x pvc window locking handle with key"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfaf9",
+    "code": "318123",
+    "description": "WINDOW:CHILD RESTRICTOR TO PVCU Window:Renew or supply and fix new adjustable child proof restrictor/catch to any type of PVCu window including removing existing fitting.",
+    "materials": "1x child proof restictor; "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfaf0",
+    "code": "318107",
+    "description": "WINDOW:RENEW HANDLE TO PVCU Window:Renew any defective or broken handle to PVCu window including remove existing, check, lubricate operating mechanism, renew handle to match existing and test.",
+    "materials": "1x pvc window locking handle with key"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfb08",
+    "code": "318179",
+    "description": "WINDOW:REPOINT SILICONE TO PVCU FRAME Window:Rake out, prepare and repoint with silicone mastic sealant complete around any external face of PVCu window frame.",
+    "materials": "1x white silicone"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfb0a",
+    "code": "318185",
+    "description": "WINDOW:RENEW CILL TO PVCU Window:Renew standard section PVCu cill to PVCu window, remove existing, clean, prepare and supply and fit new cill to match existing with end caps, all cutting, mitres, silicone sealant, make good.",
+    "materials": "1x window cill  / check "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfb17",
+    "code": "318201",
+    "description": "DOOR FRAME:RAKE OUT AND REPOINT SEALANT Door Frame:Rake out, prepare and repoint with silicone mastic sealant complete around any door frame of any size (per face).",
+    "materials": "1x white silicone"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfb18",
+    "code": "318203",
+    "description": "WINDOW FRAME:RAKE OUT AND REPOINT Window Frame:Rake out, prepare and repoint with silicone mastic sealant complete around any window frame (per face).",
+    "materials": "1x white silicone "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfb21",
+    "code": "321105",
+    "description": "DOOR:RENEW HW PANELLED OR GLAZED BACK DOOR Door:Renew back door with any size 44mm hardwood panelled, glazed or part glazed door, hang on 1.5 pair butts, fix ironmongery, weathermould, double glazed, make good and prepare to decorate.",
+    "materials": "1x FD / check; 1x ironmongery "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfb22",
+    "code": "321107",
+    "description": "DOOR:RENEW HW PANELLED OR GLAZED FRONT DOOR Door:Renew front door with any size 44mm hardwood panelled, glazed or part glazed door hang on 1.5 pair butts, fix ironmongery, weathermould, double glazed, make good, prepare to decorate.",
+    "materials": "1x FED"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfb23",
+    "code": "321106",
+    "description": "DOORSET:RENEW HW PANELLED OR GLAZED BACK DOOR Doorset:Renew back door and frame with any size 44mm hardwood panelled, glazed or part glazed door prepared for double glazing, hardwood frame, ironmongery, make good, decorate to match existing.",
+    "materials": "1x plyflush external / check"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfb24",
+    "code": "321108",
+    "description": "DOORSET:RENEW HW PANELLED OR GLAZED FRONT DOOR Doorset:Renew front door and frame with any size 44mm hardwood panelled, glazed or part glazed door prepared for double glazing, hardwood frame, ironmongery, make good, decorate to match existing.",
+    "materials": "1x FED / check"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfb3c",
+    "code": "323103",
+    "description": "DOOR:RENEW 1HR FLUSH FRONT DOOR Door:Renew front door with any size 1.00hr flush firecheck door and hang on 1.5 pair butts, fix ironmongery, weathermould, intumescent strips seals etc, make good, decorate to match existing.",
+    "materials": "1x FD external / check "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfb3b",
+    "code": "323101",
+    "description": "DOOR:RENEW 1/2HR FLUSH FRONT DOOR Door:Renew front door with any size 0.50hr flush firecheck door and hang on 1.5 pair butts, fix ironmongery, weathermould, intumescent strips seals etc, make good, decorate to match existing.",
+    "materials": "1x FD / check ; 3x fire hinge; 3x fire strip"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfb4e",
+    "code": "324111",
+    "description": "DOOR:PATCH OR REPAIR DOOR STILE Door:Patch, repair hanging or closing stile of softwood door including cut out and splice in new timber upto 600mm long, decorate to match existing and remove waste and debris.",
+    "materials": "1x wood filler "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfb71",
+    "code": "330031",
+    "description": "DOOR:RENEW INTERNAL PLY FLUSH - DECORATE Door:Renew internal door with any size ne 40mm thick plywood faced single skeleton core flush door, hang on 1 No. pair of 100mm steel butt hinges, all ironmongery, make good, decorate both sides.",
+    "materials": "1x plyflush / check; 1x latch pack; "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfb6c",
+    "code": "330001",
+    "description": "DOOR:RENEW INTERNAL PLY FLUSH Door:Renew internal door with any size ne 40mm thick plywood faced single skeleton core flush door, hang on 1 No. pair of 100mm steel butt hinges, all ironmongery, make good, prepare to decorate.",
+    "materials": "1x plyflush / check ; 1x latch pack "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfb7b",
+    "code": "330013",
+    "description": "DOOR:RENEW 1/2HR FIRE INTERNAL Door:Renew internal with any size half hour plywood faced fire check flush door, hang on 1.5 pairs 100mm steel hinges, make good, ironmongery, intumescent strips, smoke seals, prepare to decorate.",
+    "materials": "1x FD / check ; 3x fire hinge; 3x fire strip ; 1x latch pack "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfb88",
+    "code": "335005",
+    "description": "DOOR:PATCH REPAIR INTERNAL Door:Patch in and make good as necessary patch in softwood or hardwood door, touch up decorations to match existing.",
+    "materials": "1x wood filler"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfb84",
+    "code": "330051",
+    "description": "DOOR:RENEW 1/2HR FD30 FIRE INTERNAL AND STOPS Door:Renew internal with any size FD30S plywood faced fire check flush door with all ironmongery, intumescent strips and smoke seals, 25x32mm door stop set, make good, prepare for decoration.",
+    "materials": "1x FD / check; 3x fire strips; 3x fire hinges; 1x latch pack ; ; "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfb8b",
+    "code": "335091",
+    "description": "DOOR:OVERHAUL INTERNAL COMPLETE Door:Overhaul door frame/lining complete, remove all iron mongery, piece out, make good, resecure architraves, rehang door on 1.5 pairs of butt hinges, refix ironmongery, touch up.",
+    "materials": "1x caulk "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfb80",
+    "code": "330043",
+    "description": "DOOR:RENEW 1/2HR FIRE INTERNAL - DECORATE Door:Renew internal with any size half hour plywood faced fire check flush door, hang on 1.5 pairs 100mm steel hinges, make good, ironmongery, intumescent strips, smoke seals, decorate both sides.",
+    "materials": "1x FD / check; 3x fire strip; 1x latch"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfb9e",
+    "code": "342105",
+    "description": "FRAME:RENEW INTERNAL WITH STOPS AND ARCHITRAVES Frame:Renew internal softwood door frame or lining ne 32x144mm for single door, plug to brickwork, 14x27mm softwood door stops, ne 25x75mm softwood architraves both sides, make good, decorate.",
+    "materials": "1x softwood door frame; 4x 75mm architrave at 2.4m"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfbae",
+    "code": "342321",
+    "description": "FRAME:SPLICE INTERNAL REPAIR Frame:Cut out and splice new piece ne 1.00mm long into internal door frame, remove/rehang door, ease and adjust, make good butt recesses in frame, remove/refix architraves and stops, decorate.",
+    "materials": "1x wood filler "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfba8",
+    "code": "342307",
+    "description": "FRAME:SPLICE EXTERNAL REPAIR NE 1.0M Frame:Cut out and splice new piece ne 1.00m long into external door frame, remove, rehang door, remove, refix keep, ease, adjust, make good, point with sealant, and decorate to match existing.",
+    "materials": "1x wood filler"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfbb3",
+    "code": "342507",
+    "description": "STOP:RENEW OR SUPPLY 25X50MM SOFTWOOD FIRE DOOR Stop:Renew or supply any door stop with 25x50mm softwood door stop set to fire check door, glued, screwed in accordance with BS459 Part 2 to door frame, prepare for redecoration, remove debris.",
+    "materials": "1x doorstop 25x25"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfbb6",
+    "code": "343103",
+    "description": "INTUMESCENT STRIP:RENEW UPTO 1 HOUR Intumescent Strip:Renew or supply and fix new 18 x 4mm intumescent strip, upto one hour application, and setting into groove in timber frame or door.",
+    "materials": "3x fire strip"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfbb7",
+    "code": "343107",
+    "description": "INTUMESCENT STRIP:RENEW UPTO 1 HOUR SMOKE SEAL Intumescent Strip:Renew or supply and fix new intumescent strip, one hour application, with integral cold smoke seal and setting into groove in timber frame or door.",
+    "materials": "2.5x fire strip"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfbd0",
+    "code": "350005",
+    "description": "PANELLING:RENEW IN HARDBOARD Panelling:Remove existing hardboard panelling and renew with 3.2mm faced hardboard panelling fixed to softwood with brass cups and screws and remove waste and debris.",
+    "materials": "1x Hardboard  / check"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfbf6",
+    "code": "363001",
+    "description": "CURTAIN BATTEN:RENEW OR FIX NEW Curtain Batten:Renew or supply and fix new ne 25x75mm wrot softwood curtain batten remove/rehang rails and curtains, fix new batten to any background, make good, decorate to match existing.",
+    "materials": "1x timber 2x1 2.4m"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfbfa",
+    "code": "371005",
+    "description": "KITCHEN UNIT:RENEW CORNER BASE TO MATCH EXISTING Kitchen Unit:Renew any size or type of prefinished corner base unit to match existing, plug and scribe to walls, any necessary grounds, make good to all finishes.",
+    "materials": "1x CBU / check"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc01",
+    "code": "371025",
+    "description": "KITCHEN UNIT:RENEW SINGLE BASE 300X600 Kitchen Unit:Renew any type of prefinished complete single 300x600mm base unit including plug and scribe to walls and any necessary grounds and make good all wall and floor finishes disturbed.",
+    "materials": "1x 300mm BU /check "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc03",
+    "code": "371029",
+    "description": "KITCHEN UNIT:RENEW SINGLE BASE 500X600 Kitchen Unit:Renew any type of prefinished complete single 500x600mm base unit including plug and scribe to walls and any necessary grounds and make good all wall and floor finishes disturbed.",
+    "materials": "1x kitchen units / check"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc1f",
+    "code": "372005",
+    "description": "WORKTOP:REMOVE AND REFIX Worktop:Remove and securely refix any width worktop including seal joint to wall with waterproof sealant and make good damaged and renew any missing wall tiles.",
+    "materials": "1x worktop / check"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc24",
+    "code": "372017",
+    "description": "WORKTOP:RENEW JOINT STRIP Worktop:Renew aluminium joint strip between worktops including remove and refix worktops as necessary and make good.",
+    "materials": "1x wtop joint strip "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc1a",
+    "code": "371071",
+    "description": "KITCHEN UNIT:RENEW DRAWER PACK 500X600 Kitchen Unit:Renew any type of prefinished complete 500x600mm drawer pack unit, plug and scribe to walls, any necessary grounds, make good to all finishes, and remove waste and debris.",
+    "materials": "1x  DP unit/ check "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc21",
+    "code": "372009",
+    "description": "WORKTOP:PROVIDE FLY END PANEL Worktop:Supply and fix 18mm chipboard end panel melamine faced both sides, PVC lipped on all edges or vinyl wrap MDF, 600x870mm high, fixed to worktop and floor with plastic angle brackets.",
+    "materials": "1x end panel / check "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc06",
+    "code": "371035",
+    "description": "KITCHEN UNIT:RENEW DOUBLE BASE 1000MM Kitchen Unit:Renew any type of prefinished complete double 1000x600mm base unit including plug and scribe to walls and any necessary grounds and make good all wall and floor finishes disturbed.",
+    "materials": "1x 1000 BU / check"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc13",
+    "code": "371061",
+    "description": "KITCHEN UNIT:RENEW DOUBLE WALL 1000X300 900MM HIGH Kitchen Unit:Renew any type of prefinished complete double 1000x300mm wall unit, 900mm high, plug and scribe to walls, any necessary grounds, make good to all finishes. And remove waste and debris.",
+    "materials": "1x WU / check"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc10",
+    "code": "371055",
+    "description": "KITCHEN UNIT:RENEW SINGLE WALL 500X300 900MM HIGH Kitchen Unit:Renew any type of prefinished complete single 500x300mm wall unit, 900mm high, plug and scribe to walls, any necessary grounds, make good to all finishes. And remove waste and debris.",
+    "materials": "1x 300 WU"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc25",
+    "code": "372019",
+    "description": "WORKTOP:25X25MM EDGE TRIM Worktop:Supply and fix 25x25mm PVC/aluminium edge trim holed and screwed to softwood.",
+    "materials": "2x worktop edge trim"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc1d",
+    "code": "372001",
+    "description": "WORKTOP:RENEW NE 40MM THICK POST FORMED Worktop:Renew with high density waterproof MR chipboard worktop ne 40mm thick, 1.3mm laminated sheet, post formed one edge, reverse compensated, veneer edges, silicone seal, splashback.",
+    "materials": "1x worktop / check"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc07",
+    "code": "371037",
+    "description": "KITCHEN UNIT:RENEW DOUBLE BASE 1200MM Kitchen Unit:Renew any type of prefinished complete double 1200x600mm base unit including plug and scribe to walls and any necessary grounds and make good all wall and floor finishes disturbed.",
+    "materials": "Sink unit / check "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc1e",
+    "code": "372002",
+    "description": "WORKTOP:RENEW NE 40MM THICK DOUBLE POST FORMED Worktop:Renew with high density waterproof MR chipboard worktop ne 40mm thick, 1.3mm laminated sheet, post formed two edges, reverse compensated, veneer edges, silicone seal, splashback.",
+    "materials": "2x worktop / check"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc04",
+    "code": "371031",
+    "description": "KITCHEN UNIT:RENEW SINGLE BASE 600X600 Kitchen Unit:Renew any type of prefinished complete single 600x600mm base unit including plug and scribe to walls and any necessary grounds and make good all wall and floor finishes disturbed.",
+    "materials": "1 x 600 BU / check"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc26",
+    "code": "372021",
+    "description": "WORKTOP:PROVIDE COVERBEAD Worktop:Supply and fix proprietary aluminium L shaped cover bead rounded at end, screwed to edge of chipboard worktop.",
+    "materials": "2x wtop edge strip"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc29",
+    "code": "373007",
+    "description": "KITCHEN UNIT:RENEW BASE UNIT DOOR Kitchen Unit:Renew base unit door with melamine faced and edged chipboard or vinyl wrap door, including pair of spring loaded concealed hinges, fit and hang, ease and adjust.",
+    "materials": "1x BU door / check"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc2e",
+    "code": "373019",
+    "description": "KITCHEN UNIT:RENEW BOTTOM SHELF Kitchen Unit:Renew bottom shelf to base unit with 19mm thick melamine faced and edged chipboard or vinyl wrapped MDF, ne 575mm deep x 1150mm wide overall, cut and fit to unit.",
+    "materials": "1x BU shelf / check"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc2f",
+    "code": "373021",
+    "description": "KITCHEN UNIT:RENEW SIDE PANEL Kitchen Unit:Renew side panel to any base unit with melamine faced and edged or vinyl wrap chipboard replacement panel including cut and fit to unit.",
+    "materials": "1x BU end panel "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc30",
+    "code": "373023",
+    "description": "KITCHEN UNIT:RENEW PLINTH Kitchen Unit:Renew plinth to any base unit with melamine faced and edged chipboard or vinyl wrap MDF plinth including cut and fit to unit.",
+    "materials": "2x plinths /check"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc2d",
+    "code": "373015",
+    "description": "KITCHEN UNIT:RENEW SHELF TO UNIT Kitchen Unit:Renew shelf to base or wall unit with 19mm thick melamine faced and edged or vinyl wrap chipboard, fixed to existing bearers.",
+    "materials": "1x shelf / check "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc31",
+    "code": "373027",
+    "description": "KITCHEN UNIT:RENEW DRAWER BOX COMPLETE Kitchen Unit:Renew drawer to kitchen unit with proprietary plastic drawer box complete with runners, remove existing front from old drawer and refix to new drawer box, test, adjust.",
+    "materials": "1x drawer / check"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc2a",
+    "code": "373009",
+    "description": "KITCHEN UNIT:RENEW WALL UNIT DOOR Kitchen Unit:Renew any height wall unit door with melamine faced and edged chipboard door to match existing, including pair of spring loaded concealed hinges, fit and hang, ease and adjust.",
+    "materials": "1x WU door / check"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc39",
+    "code": "375061",
+    "description": "KITCHEN UNITS:RENEW DOOR OR DRAWER HANDLES NE 15 Kitchen Units:Renew all door or drawer handles as instructed by the Client's Representative (over 11 and upto 15 handles renewed in one kitchen).",
+    "materials": "1x cupboard handle / check"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc43",
+    "code": "381001",
+    "description": "SKIRTING:RENEW SOFTWOOD SKIRTING Skirting:Renew any size softwood plain, moulded or chamfered skirting plugged to brickwork, including all ends and angles and prepare for redecoration, and remove waste and debris.",
+    "materials": "1x skirting / check"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc3e",
+    "code": "375007",
+    "description": "WARDROBE:RENEW HINGE Wardrobe:Renew butt or concealed hinge to door including removing existing, adjustment and realignment of door, make good and touch up decorations as necessary.",
+    "materials": "2x unit hinges "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc4b",
+    "code": "384001",
+    "description": "THRESHOLD:RENEW TO DOOR OPENING Threshold:Renew or provide 19x150mm twice splayed and twice rounded hardwood door threshold ne 1.00m long including notch and fit ends and decorate to match existing and remove waste and debris.",
+    "materials": "1x door threshold"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc4e",
+    "code": "385003",
+    "description": "SHELVING:RENEW SLATTED COMPLETE Shelving:Renew slatted shelving consisting of 20x44mm slats at 75mm centres on and including 25x50mm cross bearers at 500mm centres and remove waste and debris.",
+    "materials": "1x curtain batten 2x1 timber "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc5a",
+    "code": "387003",
+    "description": "DUCT:RENEW 6MM PLYWOOD SIDED CASING OVER 300MM Duct:Renew pipe duct casing with 6mm plywood casing over 300mm wide, screw to framing with brass cups and screws and decorate to match existing, and remove waste and debris.",
+    "materials": "1x plywood min. 9mm x 1m² "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc58",
+    "code": "387001",
+    "description": "DUCT:RENEW 6MM PLYWOOD CASING SIDE NE 300MM Duct:Renew pipe duct casing with 6mm plywood casing up to 300mm wide, screw to framing with brass cups and screws and decorate to match existing, and remove waste and debris.",
+    "materials": "1x mdf; "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc5c",
+    "code": "387007",
+    "description": "DUCT:RENEW 6MM PLYWOOD SIDED CASING NE 450MM Duct:Renew 2 or 3 sided pipe duct casing ne 450mm girth 6mm plywood casing sides screwed to 38x50mm framing fixed to walls, form access points as necessary and decorate to match existing.",
+    "materials": "1x plywood 1m²"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc54",
+    "code": "386003",
+    "description": "WINDOWBOARD:RENEW MDF Windowboard:Renew ne 25x300mm MDF windowboard plugged, screwed and pellated to brickwork, make good plasterwork and decorations and decorate to match existing and remove waste and debris.",
+    "materials": "1x mdf / check"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc62",
+    "code": "387019",
+    "description": "DUCT:FORM ACCESS PANEL IN EXISTING Duct:Form access panel in existing duct casing, remove plywood casing as necessary, cut out, form access panel fixed with brass cups and screws all additional framing and make good decorations.",
+    "materials": "1x 600 BU white shelf "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc64",
+    "code": "388001",
+    "description": "BATH PANEL:RENEW HARDBOARD SIDE AND FRAMING Bath Panel:Renew or supply and fix 4.8mm self finished hardboard side bath panel, securely screwed with chromium plated dome headed screws to and including 38x50mm softwood framing.",
+    "materials": "1x bath panel"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc66",
+    "code": "388005",
+    "description": "BATH PANEL:RENEW HARDBOARD SIDE END AND FRAMING Bath Panel:Renew or supply and fix 4.8mm self finished hardboard side and end bath panels securely screwed with cp dome screws, 38x50mm softwood framing complete with metal bath panel trim.",
+    "materials": "1x bath panel; "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc68",
+    "code": "388009",
+    "description": "BATH PANEL:RENEW HARDBOARD END EXISTING FRAMING Bath Panel:Renew or supply and fix 4.8mm self finished hardboard end bath panel securely screwed with chromium plated dome screws to existing framing complete with metal bath panel trim.",
+    "materials": "1x bath panel"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc67",
+    "code": "388007",
+    "description": "BATH PANEL:RENEW HARDBOARD SIDE EXISTING FRAMING Bath Panel:Renew or supply and fix 4.8mm self finished hardboard side bath panel securely screwed with chromium plated dome screws to existing framing and remove waste and debris.",
+    "materials": "1x bath panel"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc70",
+    "code": "390107",
+    "description": "HINGES:RENEW STEEL BUTT HINGES Hinges:Renew ne 1.5 pairs 100mm mild steel butt hinges, ease and adjust door, make good to recesses in frame.",
+    "materials": "1x FD hinge "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc69",
+    "code": "388011",
+    "description": "BATH PANEL:RENEW HARDBD SIDE END EXISTING FRAMING Bath Panel:Renew or supply and fix 4.8mm self finished hardboard side and end bath panels securely screwed with chromium plated dome screws to existing framing and metal bath panel trim.",
+    "materials": "1x bath panel "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc90",
+    "code": "390931",
+    "description": "LOCK:FULL LOCK CHANGE - FRONT AND REAR DOOR Lock:Renew cylinder rim night latch complete, 5 lever mortice deadlock complete to front door, 5 lever mortice lock complete to rear door, alter doors for locks, provide two new keys for each lock.",
+    "materials": "1x Deadlock europrofile ; 1x eurolock "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc75",
+    "code": "390307",
+    "description": "LIFT:RENEW SASH LIFT Lift:Renew or supply and fix new sash lift.",
+    "materials": "1x sash lift"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc79",
+    "code": "390501",
+    "description": "CLOSER:RENEW LIGHT DUTY OVERHEAD/DOOR RESTRICTOR Closer:Renew or supply and fix light duty overhead door closer or other equal and approved screwed to door and frame, make good and remove waste and debris.",
+    "materials": "1x overhead door closer "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc8d",
+    "code": "390925",
+    "description": "LOCK:RENEW EUROLOCK CYLINDER Lock:Renew 'eurolock' cylinder only to lock including provide two new keys.",
+    "materials": "1x Euro lock thumb turn;  "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc96",
+    "code": "391305",
+    "description": "NIGHTLATCH:RENEW CYLINDER BARREL Nightlatch:Renew cylinder barrel to nightlatch and provide two new keys.",
+    "materials": "1x nightlatch cylinder "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc88",
+    "code": "390915",
+    "description": "LOCK:RENEW 5L MORTICE DEADLOCK Lock:Renew 5 lever mortice deadlock, keep and set of escutcheons including altering door as necessary for new lock and provide two new keys.",
+    "materials": "1x Deadlock europrofile "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc92",
+    "code": "391101",
+    "description": "LATCH:RENEW MORTICE LATCH COMPLETE Latch:Renew mortice latch, keep and renew or refix set of anodised aluminium lever handle furniture including altering door as necessary for new latch.",
+    "materials": "1x latch pack"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc74",
+    "code": "390301",
+    "description": "FASTENER:RENEW ANY TYPE OF SASH FASTENER Fastener:Renew/supply and fix any type (including Fitch and Brighton patterns) of new sash fastener including make good and touch up decorations.",
+    "materials": "2x sash window fastner "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc8f",
+    "code": "390929",
+    "description": "LOCK:FULL LOCK CHANGE - FRONT DOOR Lock:Renew cylinder rim night latch, keep and pull handle, and 5 lever mortice deadlock, keep, set of escutcheons, alter door as necessary for new locks and provide two new keys for each lock.",
+    "materials": "1x night latch cylinder "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc76",
+    "code": "390309",
+    "description": "BOLT:RENEW SASH BOLT Bolt:Renew or supply and fix new lockable sash bolt to centre rail of sliding sash timber windows including make good and touch up decorations, hand key to Tenant.",
+    "materials": "1x sash bolt"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc95",
+    "code": "391301",
+    "description": "NIGHTLATCH:RENEW COMPLETE Nightlatch:Renew cylinder rim nightlatch, keep and pull handle, including altering door as necessary for new latch and provide two new keys.",
+    "materials": "1x nightlatch "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc89",
+    "code": "390917",
+    "description": "LOCK:OVERHAUL ANY LOCK COMPLETE Lock:Remove any type of lock and furniture, dismantle, overhaul, repair, oil and assemble and refix to door.",
+    "materials": "1x privacy "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc77",
+    "code": "390311",
+    "description": "LOCK:RENEW PAIR OF SASH LOCKS Lock:Renew or supply and fix new pair of lockable sash locks to restrict opening of sliding sash timber windows, including make good and touch up decoratations, hand key to Tenant.",
+    "materials": "1x Sash window restrictor with key"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc7b",
+    "code": "390505",
+    "description": "CLOSER:RENEW OR SUPPLY PERKO TYPE Closer:Renew or supply and fix Perko type concealed door closer screwed to door and frame, including remove and refix door or door stop as necessary, make good and remove waste and debris.",
+    "materials": "1x perko"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc9c",
+    "code": "391501",
+    "description": "CATCH:RENEW CATCH AND KEEP Cupboard:Renew catch and keep including altering door as necessary for new catch and housing out frame for keep.",
+    "materials": "1x catch"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfc9e",
+    "code": "391505",
+    "description": "CUPBOARD:RENEW DOOR CATCH Cupboard:Renew cupboard door catch (any type).",
+    "materials": "1x door catch"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfcad",
+    "code": "391901",
+    "description": "WINDOW FITTING:RENEW BRASS CASEMENT CATCH Window Fitting:Renew brass casement catch and keep to timber window.",
+    "materials": "1x window casement catch"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfcae",
+    "code": "391905",
+    "description": "WINDOW FITTING:RENEW BRASS STAY AND FASTENER Window Fitting:Renew any brass casement stay and two pin fastener and fix to timber window.",
+    "materials": "2x Window fastner arm with key"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfcb5",
+    "code": "391929",
+    "description": "WINDOW FITTING:RENEW RESTRICTOR STAY Window Fitting:Renew window restrictor stay to timber window.",
+    "materials": "1x child proof window restrictor; "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfca3",
+    "code": "391707",
+    "description": "BOLT:RENEW INDICATOR BOLT Bolt:Renew 175mm SAA bathroom indicator bolt and keep.",
+    "materials": "1x privacy "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfcb9",
+    "code": "391939",
+    "description": "WINDOW FITTING:RENEW LOCKABLE RESTRICTOR STAY Window Fitting:Renew any type or supply and fix new anodised aluminium lockable restrictor security stay with key operation, fix to casement or fanlight of timber window, and provide two new keys.",
+    "materials": "1x window lockable restrictor with key"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfcc4",
+    "code": "392501",
+    "description": "DOOR FURNITURE:RENEW SET OF LEVER HANDLES Door Furniture:Renew set of anodised aluminium lever latch or lock furniture.",
+    "materials": "1x cupb pull handle"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfcca",
+    "code": "392517",
+    "description": "DOOR FURNITURE:RENEW OR INSTALL PULL HANDLES Door Furniture:Renew or supply and fix pull handle, SAA, 150mm.",
+    "materials": "8x kitchen unit handle "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfcdc",
+    "code": "393307",
+    "description": "CUPBOARD:RENEW KNOB Cupboard:Renew satin anodised aluminium knob handle.",
+    "materials": "1x D handle"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfcd9",
+    "code": "393301",
+    "description": "CUPBOARD:RENEW CUPBOARD PULL Cupboard:Renew 44mm satin anodised aluminium cupboard pull handle.",
+    "materials": "1x D handle "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfcd1",
+    "code": "392531",
+    "description": "DOOR FURNITURE:RENEW OR INSTALL LOW THRESHOLD Door Furniture:Renew or supply and fix aluminium slimline low access threshold including plugging and screwing to floor, make good finishes.",
+    "materials": "1x door treshold"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfccf",
+    "code": "392527",
+    "description": "DOOR FURNITURE:RENEW OR INST BATHRM ESCUTCHEON SET Door Furniture:Renew or supply and fix new set of escutcheons to to match existing complete with turn button, indicator and emergency release and remove waste and debris.",
+    "materials": "1x privacy "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfcd8",
+    "code": "393101",
+    "description": "DOOR STOP:PROVIDE RUBBER STOP Door Stop:Supply and fix 25mm diameter rubber door stop to softwood or masonry.",
+    "materials": "1x spring door stop "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfcda",
+    "code": "393303",
+    "description": "CUPBOARD:RENEW PULL HANDLE Cupboard:Renew 100mm satin anodised aluminium 'D' pull handle, including plug holes where necessary.",
+    "materials": "1x cupb D pull handle"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfcd2",
+    "code": "392701",
+    "description": "LETTERPLATE:RENEW COMPLETE WITH KNOCKER Letterplate:Renew letter plate and knocker including plugging and redrilling holes and altering opening where necessary and provide and fix new brush type draught overluder.",
+    "materials": "1x letterplate"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfd07",
+    "code": "411123",
+    "description": "WALL:HACK REPLASTER TWO COATS DUB OUT Wall:Hack off plaster, rake out and prepare background, float and set to walls including additional coat or dub out as necessary with cement and sand including all labours and remove waste and debris.",
+    "materials": "1x bonding & cement "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfcf0",
+    "code": "397001",
+    "description": "OPENING:BOARD UP WITH 12MM STERLING OR PLYWOOD Opening:Board up window or door with 12mm Sterling or plywood board or blockboard including cut to size, nail over window or door (NOT to frame) and leave secure (per opening).",
+    "materials": "1x bathpanel "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfd06",
+    "code": "411121",
+    "description": "WALL:HACK REPLASTER TWO COATS DUB OUT IN PATCH Wall:Hack off plaster, rake out and prepare background, float and set to walls in patch including additional coat or dub out as necessary with cement and sand, all labours, remove spoil.",
+    "materials": "1x easi filler  "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfd03",
+    "code": "411107",
+    "description": "WALL:RENEW APPLY 3MM SKIM COAT PLASTER Wall:Renew defective or apply new skim coat of plaster including hack off existing and renew including all preparation and joints to existing surfaces and remove waste and debris.",
+    "materials": "1x Multifinnish / check; 1x PVA; 1x Verdeață / check"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfd09",
+    "code": "411135",
+    "description": "WALL:TWO COATS BONDING WALLS Wall:Bond and set to walls 12mm thick, including additional coat or dub out as necessary with cement and sand including all labours and remove waste and debris.",
+    "materials": "1x bonding & cement; 1x pva"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfd02",
+    "code": "411105",
+    "description": "WALL:RENEW APPLY 3MM SKIM PLASTER IN PATCH Wall:Renew defective or apply new skim coat of plaster in patch including hack off existing and renew including all preparation and joints to existing surfaces and remove waste and debris.",
+    "materials": "1x easi filler "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfd0c",
+    "code": "411313",
+    "description": "WALL:FIX NE 12.5MM PLASTERBOARD 3MM SKIM IN PATCH Wall:Supply, cut and fix ne 12.5mm plasterboard to walls in patch including scrim joints and 3mm skim plaster, additional support battens, noggins etc to studding, labours and remove waste and debris.",
+    "materials": "1x easi filler "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfd0d",
+    "code": "411315",
+    "description": "WALL:FIX NE 12.5MM PLASTERBOARD 3MM SKIM COAT Wall:Supply, cut and fix ne 12.5mm plasterboard to walls, scrim joints and 3mm skim plaster to walls, including additional support battens, noggins etc to studding, labours and remove waste and debris",
+    "materials": "plasterboard / check x"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfd10",
+    "code": "411323",
+    "description": "WALL:RENEW NE 12.5MM PLASTERBOARD 3MM SKIM Wall:Take down plasterboard or lath and plaster to wall, denail studs etc, fix ne 12.5mm plasterboard to wall, scrim joints, 3mm skim plaster, additional battens etc, all labours, remove spoil.",
+    "materials": "1x plasterboard 12.5mm"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfd13",
+    "code": "413105",
+    "description": "CEILING:RENEW APPLY SKIM COAT IN PATCH Ceiling:Hack off existing and renew defective or apply new skim coat of plaster in patch including all joints to existing surfaces and all labours, make good and remove waste and debris.",
+    "materials": "Easi filler x "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfd14",
+    "code": "413107",
+    "description": "CEILING:RENEW APPLY SKIM COAT Ceiling:Hack off existing and renew defective or apply new skim coat of plaster including all joints to existing surfaces and all labours, make good and remove waste and debris.",
+    "materials": "1x Multifinnish; 1x PVA "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfd18",
+    "code": "413119",
+    "description": "CEILING:HACK RENEW PLASTER Ceiling:Hack off defective plaster to ceiling, prepare and replaster ceiling in two coats (bonding and finish), joints to existing surfaces, all labours, make good and remove waste and debris.",
+    "materials": "1x easi filler "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfd20",
+    "code": "413319",
+    "description": "CEILING:RENEW NE 12.5MM PLASTERBOARD 3MM SKIM COAT Ceiling:Take down existing ceiling, denail joists, fix ne 12.5mm plasterboard to ceiling, scrim joints, 3mm skim plaster, additional battens, all labours, make good, remove waste and debris.",
+    "materials": "1x plasterboard 9mm"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfd1b",
+    "code": "413307",
+    "description": "CEILING:FIX NE 12.5MM PLASTERBOARD 3MM SKIM COAT Ceiling:Supply, cut and fix ne 12.5mm plasterboard, scrim joints and 3mm skim plaster to ceiling, additional support battens, noggins to joists, all labours, make good, remove waste and debris.",
+    "materials": "1x plasterboard ; 1x plasterboard 38mm black screws ; "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfd1a",
+    "code": "413305",
+    "description": "CEILING:FIX NE 12.5MM PLASTERBOARD 3MM SKIM PATCH Ceiling:Supply, cut and fix ne 12.5mm plasterboard, scrim joints and 3mm skim plaster to ceiling in patch including additional support battens, noggins etc. to joists, including all labours.",
+    "materials": "1x plasterboard "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfd27",
+    "code": "415003",
+    "description": "PLASTER REPAIR:RENEW REVEAL TO FRAME Plaster Repair:Renew plastered reveal complete to any door or window frame, hack off defective plaster, render and set, remake arris, joints to existing, make good decorations and remove spoil.",
+    "materials": "Easi filler / bonding x"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfd2a",
+    "code": "415013",
+    "description": "PLASTER REPAIR:REPAIR CRACK TO WALL OR CEILING Plaster Repair:Repair cracks to wall or ceiling plaster, cut out cracks and apply finish plaster, trowel off flush with existing surfaces.",
+    "materials": "1x caulk "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfd2d",
+    "code": "415019",
+    "description": "PLASTER REPAIR:RENEW PLASTER VENT Plaster Repair:Renew or fix new plaster vent any size ne 225x150mm with flyscreen including remove existing and fix new to wall incl all make good.",
+    "materials": "1x vent"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfd45",
+    "code": "427009",
+    "description": "WALL:DRY LINE 25MM THERMALBOARD Wall:Strip existing walls, clean down mould and fungi, line walls with 25mm nominal plasterboard faced thermal board in accordance with manufacturers technical data sheet, make good, remove spoil.",
+    "materials": "1x thermal board; 1x universal boanding; "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfcd3",
+    "code": "392702",
+    "description": "LETTERPLATE:SUPPLY AND FIX NEW Letterplate:Supply and fix new letter plate including cutting opening in door or sidelight frame and provide and fix new brush type draught excluder.",
+    "materials": "1x letter box"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfd53",
+    "code": "431007",
+    "description": "WALL TILES:RENEW OR FIX NEW GLAZED TILES Wall Tiles:Clean off walls, fix new ne 152x152x 6mm glazed ceramic wall tiles to splashback and cills with adhesive, grout, edge strips, cutting, hack off glazed wall tiling, make good, remove debris.",
+    "materials": "1x tile box; 1x tile adhesive"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfd50",
+    "code": "431315",
+    "description": "SCREED:LATEX SELF LEVEL Screed:Lay latex self levelling screed.",
+    "materials": "1x Latex / check"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfd4d",
+    "code": "431309",
+    "description": "SCREED:LAY 40MM THICK SCREED Screed:Lay cement and sand floor screed ne 40mm thick, trowel smooth for floor finish, clean off, grout sub-base with cement slurry, apply liquid damp proof membrane and remove waste and debris.",
+    "materials": "1x latex / check"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfd51",
+    "code": "431003",
+    "description": "WALL TILES:HACK OFF AND MAKE GOOD Wall Tiles:Hack off glazed wall tiling, make good bed and remove waste and debris.",
+    "materials": "1x tile box"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfd52",
+    "code": "431005",
+    "description": "WALL TILES:RENEW OR FIX INDIVIDUAL NEW GLAZED TILE Wall Tiles:Clean off walls, fix new ne 152x152x 6mm glazed ceramic wall tile in patch to splashbacks, cills with adhesive, grout, cutting, hack off tiling in patch, make good (per tile).",
+    "materials": "1x tile"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfd4a",
+    "code": "431303",
+    "description": "SCREED:HACK UP SCREED Screed:Hack up any thickness of floor screed and remove waste and debris.",
+    "materials": "1x latex"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfd56",
+    "code": "431025",
+    "description": "WALL TILES:RAKE OUT AND REGROUT Wall Tiles:Rake out and regrout wall tiling and remove waste and debris.",
+    "materials": "1x regrout  "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfd57",
+    "code": "431041",
+    "description": "WALL TILES:NEW GLAZED TILES TO KITCHEN Wall Tiles:Clean off walls, prepare to receive new tiles, fix new ne 152x152x6mm glazed coloured ceramic wall tiles to kitchen worktop, splashback cooker space, cills, grout, edge strips, make good.",
+    "materials": "2x tile box / check; 1x tile adhesive; 1x tile trim ; 1x white grout"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfd85",
+    "code": "432501",
+    "description": "SHEET FLOORING:RENEW VINYL Sheet Flooring:Take up any covering, clear away, supply and lay minimum 2.0mm felt backed vinyl sheet flooring with adhesive to cement and sand screed, or sheet sub-base, cutting, labours, clean off.",
+    "materials": "1x polysafe vinyl / check"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfd8a",
+    "code": "432601",
+    "description": "SHEET FLOORING:RENEW POLYSAFE Sheet Flooring:Take up any covering, clear away, supply and lay Polysafe safety flooring with adhesive to cement and sand screed or sub-base, cutting, all labours, upstands and clean off.",
+    "materials": "1x Polysafe / check"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfd8b",
+    "code": "432603",
+    "description": "SHEET FLOORING:RENEW POLYSAFE AND SUB-BASE Sheet Flooring:Take up any covering, clear away, supply and lay Polysafe safety flooring with adhesive to and including approved sheet sub-base, cutting, all labours, upstands and clean off.",
+    "materials": "1x Polysafe / check"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfd9b",
+    "code": "432805",
+    "description": "CARPET:RENEW TO DOMESTIC AREAS Carpet:Renew tight woven medium contract grade carpet to domestic areas, remove existing to tip, prepare sub-base, lay underlay, gripper or tape, cut and fit as necessary, door strips etc.",
+    "materials": "1x carpet  / check; 1x spray"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfda0",
+    "code": "433001",
+    "description": "SEALANT TO PERIMETER:RENEW TO FLOORING Sealant to Perimeter:Rake out existing and renew clear silicone sealant to perimert of existing vinyl tile or sheet flooring or upstands.",
+    "materials": "1x white silicone "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfda6",
+    "code": "435121",
+    "description": "STAIN BLOCK:APPLY ONE COAT Stain Block:Apply one coat of stain block to plastered ceiling strictly in accordance with the manufacturers technical data sheet.",
+    "materials": "1x undercoat  ; 1x white emulsion ; 1x small white spirit; "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfdba",
+    "code": "436205",
+    "description": "DOOR:PREPARE PRIME PAINT 2 GLOSS METAL DOOR Door:Rub down, prepare for and apply one coat of primer, one undercoat and two coats of gloss paint on any size single metal door (both sides and edges).",
+    "materials": "1x gloss Dulux Once "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfdbc",
+    "code": "436209",
+    "description": "WINDOW:PREPARE PRIME PAINT 2 GLOSS METAL Window:Rub down, prepare for and apply a coat of primer, one undercoat, and two coats of gloss paint on surface of metal window (one side and edges).",
+    "materials": "1x Dulux Once Gloss "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfde3",
+    "code": "438017",
+    "description": "DOOR:PREPARE PRIME PAINT TIMBER DOOR (B/S) Door:Rub down, prepare for and apply one coat of primer, one undercoat and two coats of gloss paint to all surfaces of any type or size of single timber door (both sides and edges).",
+    "materials": "1x Gloss Dulux once "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfe0b",
+    "code": "442001",
+    "description": "WALLS AND CEILINGS:APPLY MIST 2 COATS EMULSION Walls and Ceilings:Prepare and apply one mist coat and two full coats of emulsion paint to walls or ceilings in patch repairs to match existing including all joints to adjacent surfaces and finishes.",
+    "materials": "1x white emulsion"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfe10",
+    "code": "450019",
+    "description": "ROOM:REDECORATE 20-25SM CEILING AREA Room:Rub down, prepare for and apply two coats of emulsion to ceilings and walls, one undercoat and gloss on all previously painted surfaces of room over 20.00 and ne 25.00sm ceiling area.",
+    "materials": "1x white emulsion ; 1x "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfe0f",
+    "code": "450001",
+    "description": "ROOM:REDECORATE UPTO 20SM CEILING AREA Room:Rub down, prepare for and apply two coats of emulsion to ceilings and walls, one undercoat and gloss on all painted surfaces of any room ne 20.00sm ceiling area.",
+    "materials": "1x magnolia emulsion; 1x gloss Dulux Once"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfe15",
+    "code": "450011",
+    "description": "HALL:REDECORATE COMPLETE OVER 3SM CEILING AREA Hall:Rub down, prepare, apply two coats of emulsion to ceilings, walls, one undercoat and gloss on painted surfaces of corridor, lobby, hall over 3.00sm ceiling area (single area).",
+    "materials": "1x white emulsion ; 1x gloss Dulux Once "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfe19",
+    "code": "450507",
+    "description": "ROOM:WASH REDECORATE UPTO 20SM CEILING AREA Room:Rub down, prepare for and apply two coats of emulsion to ceilings and walls, wash down only to all other previously painted surfaces of room upto 20.00sm ceiling area.",
+    "materials": "1x Gloss Dulux once "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfe13",
+    "code": "450009",
+    "description": "HALL STAIRS:REDECORATE 2 STOREY Hall Stairs:Rub down, prepare, apply two coats emulsion to ceilings, walls, one undercoat and gloss on painted surfaces of 2 storey hall, landing and staircase area (single area).",
+    "materials": "3x caulk; 1x white emulsion; 1x magnolia emulsion; 1x gloss Dulux Once; "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfe2d",
+    "code": "451015",
+    "description": "ROOM:STRIP PAPER OVER 20SM CEILING AREA Room:Extra for stripping any number of layers of wallpaper etc from walls/ceilings, extra preparation for decoration to room over 20.00sm clg area (msd per sm of clg area in excess of 20.00sm).",
+    "materials": "1x easi filler "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfe2c",
+    "code": "451007",
+    "description": "ROOM:STRIP PAPER UPTO 20SM CEILING AREA Room:Extra for stripping any number of layers of any type of wallpaper or wallcovering from walls ceilings, any extra preparation to receive new decoration for room ne 20.00sm ceiling area.",
+    "materials": "1x scraper ; 1x blades"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfe33",
+    "code": "451051",
+    "description": "ROOM:STRIP WALLPAPER UPTO 20SM CEILING AREA Room:Extra for stripping any number of layers of any type of wallpaper or wall cove ring from walls only including any extra preparation to receive new decoration for room upto 20.00sm ceiling area.",
+    "materials": "1xscraper ; 1x blades"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfe3a",
+    "code": "451107",
+    "description": "ROOM:STRIP PAINTED PAPER UPTO 20SM CEILING AREA Room:Extra for stripping any number of layers of any type of painted wallpaper or wallcovering from walls, ceilings, extra preparation for decoration for room ne 20sm ceiling area.",
+    "materials": "1x wallpaper scraper ; 1x blades "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfe66",
+    "code": "453029",
+    "description": "HALL STAIRS:EGGSHELL OR GLOSS WALLS 2 STOREY Hall Stairs:Extra for prepare and apply two coats eggshell or undercoat and gloss to walls of any size hall, landing and staircase area (2 storey, classified as a single area).",
+    "materials": "1x undercoat "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfe52",
+    "code": "452030",
+    "description": "HALL STAIRS:EGGSHELL OR GLOSS CEILING 3 STOREY Hall Stairs:Extra for prepare and apply two coats of eggshell or undercoat and gloss to ceilings of any hall, landing and staircase area (3 storey, classified as a single area).",
+    "materials": "1x undercoat "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfe3e",
+    "code": "451111",
+    "description": "HALL:STRIP PAINTED PAPER OVER 3SM CEILING AREA Hall:Extra for stripping any number of layers of painted wallpaper or coverings from walls and ceilings to lobby, hall, or corridor over 3.00sm ceiling area extra preparation (single area).",
+    "materials": "1x scraper ; 1x blades"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfe51",
+    "code": "452029",
+    "description": "HALL STAIRS:EGGSHELL OR GLOSS CEILING 2 STOREY Hall Stairs:Extra for prepare and apply two coats of eggshell or undercoat and gloss to ceilings of any hall, landing and staircase area (2 storey, classified as a single area).",
+    "materials": "1x undercoat "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfe64",
+    "code": "453027",
+    "description": "ROOM:EGGSHELL GLOSS WALLS UPTO 20SM CEILING AREA Room:Extra for prepare and apply two coats eggshell or undercoat and gloss to walls of room ne 20.00sm ceiling area.",
+    "materials": "1x undercoat  ; "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfe53",
+    "code": "452031",
+    "description": "HALL:EGGSHELL GLOSS CEILING OVER 3SM CEILING AREA Hall:Extra for prepare and apply two coats of eggshell or undercoat and gloss to ceilings of any lobby, hall or corridor over 3.00sm ceiling area (classified as a single area).",
+    "materials": "1x undercoat  ; 1x white emulsion ; 1x small white spirit; "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfe4f",
+    "code": "452027",
+    "description": "ROOM:EGGSHELL GLOSS CEILING UPTO 20SM CEILING AREA Room:Extra for prepare and apply two coats of eggshell or undercoat and gloss to ceilings, ne 20.00sm ceiling area.",
+    "materials": "1x undercoat ; 1x white emulsion ; 1x small white spirit "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfe68",
+    "code": "453031",
+    "description": "HALL:EGGSHELL OR GLOSS WALLS OVER 3SM CEILING AREA Hall:Extra for prepare and apply two coats eggshell or undercoat and gloss to walls of any lobby, hall or corridor over 3.00sm ceiling area (classified as a single area).",
+    "materials": "1x undercoat  ; 1x white emulsion "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfe6b",
+    "code": "470001",
+    "description": "DWELLING:REDECORATE 1 BEDROOM FLAT Dwelling:Redecorate complete one bedroom flat or bungalow, rub down, prepare, apply two coats of emulsion to ceilings and walls, one undercoat and gloss on all other previously painted surfaces.",
+    "materials": "1x white emulsion ; 1x magnolia matt; 1x undercoat ; 1x gloss Dulux Once ; 1x white spirit ; 3x caulk; 8x silicone "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfe6d",
+    "code": "470003",
+    "description": "DWELLING:REDECORATE 3 BEDROOM FLAT Dwelling:Redecorate complete three bedroom flat or bungalow, rub down, prepare, apply two coats of emulsion to ceilings and walls, one undercoat and gloss on all other previously painted surfaces.",
+    "materials": "1x white emulsion; 2x magnolia matt emulsion; 2x gloss Dulux Once; 8x white silicone "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfe6c",
+    "code": "470002",
+    "description": "DWELLING:REDECORATE 2 BEDROOM FLAT Dwelling:Redecorate complete two bedroom flat or bungalow, rub down, prepare, apply two coats of emulsion to ceilings and walls, one undercoat and gloss on all other previously painted surfaces.",
+    "materials": "1x white emulsion; 1x magnolia emulsion ; 1x magnolia silk; 1x gloss Dulux Once; 3x caulk ; 1x easi filler ; 8x white silicone; 1x white spirit ; "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfe6e",
+    "code": "470010",
+    "description": "DWELLING:REDECORATE 2 BEDROOM HOUSE Dwelling:Redecorate complete two bedroom house or maisonette, rub down, prepare, apply two coats of emulsion to ceilings and walls, one undercoat and gloss on all other previously painted surfaces.",
+    "materials": "Cleaning products ; 2x cleaning paper; 1x white emulsion ; 1x magnolia emulsion ; 1x magnolia silk ; 1x gloss ; 1x undercoat ; 3x caulk "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfe6f",
+    "code": "470011",
+    "description": "DWELLING:REDECORATE 3 BEDROOM HOUSE Dwelling:Redecorate complete three bedroom house or maisonette, rub down, prepare, apply two coats of emulsion to ceilings and walls, one undercoat and gloss on all other painted surfaces.",
+    "materials": "1x white emulsion ; 2x magnolia emulsion ; 1x undercoat ; 2x gloss ; 1x small white spirit ; 4x caulk ; 6x silicone "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfe72",
+    "code": "470041",
+    "description": "DWELLING:REDECORATE BEDSIT 20-30SM CEILING AREA Dwelling:Redecorate all rooms of bedsit 20.00-30.00sm ceiling area, rub down, prepare, apply two coats of emulsion to ceilings, walls, one undercoat and gloss on all other painted surfaces.",
+    "materials": "1x White Emulsion; 1x Magnolia Emulsion; 1x gloss Dulux Once"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfe73",
+    "code": "470042",
+    "description": "DWELLING:REDECORATE BEDSIT OVER 30SM CEILING AREA Dwelling:Redecorate all rooms of bedsit over 30.00sm ceiling area, rub down, prepare, apply two coats of emulsion to ceilings, walls, one undercoat and gloss on all other painted surfaces.",
+    "materials": "1x Magnolia emulsion ; 1x White emulsion ; 1x Gloss Dulux Once ; 2x caulk ; 5x white silicone "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfe76",
+    "code": "470047",
+    "description": "DWELLING:REDECORATE MULTIPLE OCCUPIED 5 BED FLAT Dwelling:Redecorate all rooms in five bedroom multiple occupancy flat comprising hall, bedrooms, lobby, communal kitchen, bathroom, toilet, shower room prepare and apply paint as specified.",
+    "materials": "2x white emulsion; 3x magnolia emulsion ; 1x magnolia silk; 3x Gloss Dulux once ; 2x white spirit ; 5x caulk ; 12x white Silicone ; "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfe9e",
+    "code": "460010",
+    "description": "DWELLING:CLEAR ENVIRONMENTALLY DIRTY Dwelling:Clear out environmentally dirty dwelling, remove contents to approved tip, dispose of anti-social, medical, human debris, initial wash/scrub disinfectant all surfaces (order skip separately).",
+    "materials": "2x paper roll; Cleaning products "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfe9b",
+    "code": "460003",
+    "description": "DWELLING:CLEAR OUT COMPLETE Dwelling:Clear out, remove all rubbish, furniture, carpets and all non- approved fittings to tip and make ready for incoming tenants (order skip separately if required).",
+    "materials": "Cleaning products ; 10x rubbish bags; 2x paper roll"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfe9a",
+    "code": "460012",
+    "description": "DWELLING:CLEAN TO LETTABLE STANDARD Dwelling:Clean, wash down, scrub, clean all kitchen units, sanitary fittings and other landlords fittings, clean windows internally, disinfect toilets, spray airfreshener all to lettable standard.",
+    "materials": "2x paper roll; Cleaning products ; 10x rubbish bags "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfece",
+    "code": "460511",
+    "description": "CARPET:CLEAN TO HALL Carpet:Thoroughly clean, scrub as necessary vacuum carpet including dry by dehumidifier to hall area complete.",
+    "materials": "1x carpet protection film"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfecc",
+    "code": "460507",
+    "description": "CARPET:CLEAN TO ROOM UPTO 20SM CEILING AREA Carpet:Thoroughly clean, scrub as necessary vacuum carpet including dry by dehumidifier to room ne 20.00sm ceiling area.",
+    "materials": "1 x carpet protection film"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfee5",
+    "code": "515007",
+    "description": "PANE:REGLAZE 4MM CLEAR OR OBSCURE OVER 1SM Pane:Reglaze single pane in 4mm clear or obscure glass, over 1.00sm, hack out and glaze with putty, sprigs, clips or beads at any level, touch up paintwork to match existing, remove waste and debris.",
+    "materials": "1x single glass  / check"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfee6",
+    "code": "515013",
+    "description": "PANE:REGLAZE 6MM CLEAR OR OBSCURE UPTO 1SM Pane:Reglaze single pane in 6mm clear or obscure glass, upto 1.00sm, hack out and glaze with putty, sprigs, clips or beads at any level, touch up decoration to match existing, remove waste and debris.",
+    "materials": "1x glass / check"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfeeb",
+    "code": "525007",
+    "description": "PANE:REGLAZE 6MM GWPP OVER 1SM Pane:Reglaze single pane in 6mm georgian wired polished plate glass over 1.00sm, hack out, glaze with putty, sprigs, etc., at any level, touch up decoration to match existing, remove waste and debris.",
+    "materials": "1x single Georgian wire /  check"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfeec",
+    "code": "530005",
+    "description": "PANE:REGLAZE 6MM TOUGHENED UPTO 1SM Pane:Reglaze single pane in 6mm toughened safety glass ne 1.00sm, hack out and glaze with putty, sprigs, clips or beads at any level, touch up decoration to match existing, remove waste and debris.",
+    "materials": "1x toughened glass / check "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfeed",
+    "code": "530007",
+    "description": "PANE:REGLAZE 6MM TOUGHENED OVER 1SM Pane:Reglaze single pane in 6mm toughened safety glass, over 1.00sm, hack out and glaze with putty, sprigs, clips or beads at any level, touch up decoration to match existing, remove waste and debris.",
+    "materials": "1x Reglaze"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfefe",
+    "code": "556005",
+    "description": "DOUBLE GLAZED UNIT:REGLAZE UPTO 1SM SAFETY LOW E Double Glazed Unit:Reglaze unit ne 1.00sm with 28mm safety low emissivity (Low E) glass flush edge hermetically sealed unit, hack out glass, glaze new unit to any frames, touch up decoration.",
+    "materials": "1 x DGU / check"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfefa",
+    "code": "551005",
+    "description": "DOUBLE GLAZED UNIT:REGLAZE UPTO 1SM-CLEAR LOW E Double Glazed Unit:Reglaze unit ne 1.00sm, 28mm clear float low emissivity (Low E) glass flush edge hermetically sealedunit, hack out glass, glaze new unit to any frames, touch up decoration.",
+    "materials": "1x DGU "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfefb",
+    "code": "551007",
+    "description": "DOUBLE GLAZED UNIT:REGLAZE OVER 1.0SM-CLEAR LOW E Double Glazed Unit:Reglaze unit over 1.00sm with 28mm clear float low emissivity (Low E) glass flush edge hermetically sealed unit, hack out, glaze new unit to any frames, touch up decoration.",
+    "materials": "1x DGU / check"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bff14",
+    "code": "565001",
+    "description": "MIRROR:RENEW 450X450X4MM Mirror:Renew 450x450x4mm silvered float glass mirror with polished edges and predrilled holes and fix to any background including all drilling and plugging and making good and remove waste and debris.",
+    "materials": "1x Mirror 450x450"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bff18",
+    "code": "570011",
+    "description": "SHOWER SCREEN:RENEW TWO SIDED GLASS SCREEN Shower Screen:Renew any two sided framed glass shower cubicle screen and door above shower tray, remove existing, drill and plug as necessary and fit new screen including all make good.",
+    "materials": "1x shower screen "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bff19",
+    "code": "570013",
+    "description": "SHOWER SCREEN:RENEW THREE SIDED GLASS SCREEN Shower Screen:Renew any three sided framed glass shower cubicle screen and door above shower tray, remove existing, drill and plug as necessary and fit new screen including all make good.",
+    "materials": "1x cubic shower screed / check "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bff2c",
+    "code": "575501",
+    "description": "NET CURTAIN:SUPPLY SINGLE WIDTH Net Curtain:Supply and install new single width, full height net curtains, hemmed all edges, to glazed opening of any type or size, on and including proprietary hanging rods or wire.",
+    "materials": "1x net curtain"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bff82",
+    "code": "620119",
+    "description": "TRAP:RENEW 40MM SINK OR BASIN TRAP Trap:Renew ne 40mm diameter plastic trap to sink or basin including all adjustments to pipework, make all connections and test on completion and remove waste and debris.",
+    "materials": "1x basin trap / check"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bff8a",
+    "code": "620133",
+    "description": "PIPE:RENEW 40MM WASTE Pipe:Renew any pipe with 40mm plastic waste pipe with all brackets, connections, bends, tees etc, cut/form holes and make good, make all necessary connections to stack, gulley or hopper head and test.",
+    "materials": "1m x 40mm waste pipe"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bff8c",
+    "code": "620137",
+    "description": "PIPE:PROVIDE CAPPED END Pipe:Provide capped end to any UPVC waste pipe ne 63mm diameter.",
+    "materials": "1 x spigot"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bff97",
+    "code": "630101",
+    "description": "SINK TOP:RENEW SINGLE DRAINER TOP - TAPS Sink Top:Renew with any size/type stainless steel single drainer sink top complete with taps, waste, plug, chain, trap, service valves, make all connections, splashback, sealant, crossbond, test.",
+    "materials": "1x sink 2 hole complete /  check (waste, trap, decking mixer)"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bff9b",
+    "code": "630109",
+    "description": "SINK:RENEW PLUG AND CHAIN Sink:Renew rubber plug and chain to sink and securely fix to and including new stud or backplate as necessary.",
+    "materials": "1x sink plug & chain "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bffa3",
+    "code": "630106",
+    "description": "SINK UNIT:RENEW SINGLE DRAINER TOP MIXER BASE UNIT Sink Unit:Renew with any size/type stainless steel single drainer sink top and base unit, new mixer, waste fittings, connect to pipework, valves,chain, trap, splashback, sealant, crossbond, test.",
+    "materials": "1x BU / check"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bffcf",
+    "code": "630701",
+    "description": "BASIN:RENEW ON BRACKETS COMPLETE TAPS Basin:Renew wash hand basin size ne 560x406mm complete with brackets, taps, waste, service valves,chain, trap, make all connections, test, splashback, silicone sealant, crossbond.",
+    "materials": "1x Basin complete (waste, taps, trap)"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bffbe",
+    "code": "630513",
+    "description": "WC PAN:RENEW SEAT COMPLETE WC Pan:Renew single or double flap seat and bracket to wc pan and remove waste and debris.",
+    "materials": "1x toilet seat "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bffaa",
+    "code": "630201",
+    "description": "SINK TOP:SUPPLY INSET TAPS Sink Top:Fix 508x935mm stainless steel inset single bowl single drainer sink top, with taps, waste, plug, chain, trap, service valves, make all connections, splashback, sealant, crossbond, test.",
+    "materials": "1x sink top complete "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bffc3",
+    "code": "630535",
+    "description": "WC CISTERN:RENEW LOW LEVEL CHINA WC Cistern:Renew with 6 litre china low level cistern complete plugged to wall reconnect existing supply overflow and flush pipework, service valve, test and make good to all finishes.",
+    "materials": "1x China cistern "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bffb9",
+    "code": "630503",
+    "description": "WC SUITE:RENEW LOW LEVEL WITH CHINA CISTERN WC Suite:Renew wc suite complete with pan, 6 litre china low level cistern, service valve, make flush, soil pipe joints with Easy-Fit connectors, test all joints, plastic seat and lid.",
+    "materials": "1x closed coupled toilet /check "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bffbc",
+    "code": "630509",
+    "description": "WC SUITE:RENEW CLOSE COUPLED WC Suite:Renew vitreous china close coupled wc suite with pan 6 litre china cistern, service valve, make soil pipe joint with Easy-Fit connector, test, plastic seat and lid to pan.",
+    "materials": "1x China ceramic low-level toilet ; 1x Toilet seat "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bffa6",
+    "code": "630121",
+    "description": "SINK UNIT:RENEW SINGLE DRAINER DEEP TOP TAPS BASE Sink Unit:Renew with any size/type stainless steel deep bowl single drainer sink top and base unit, new taps, waste fittings, pipework, valves,chain, trap, splashback, sealant, crossbond, test.",
+    "materials": "1x sink unit & sink complete / check"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bffac",
+    "code": "630221",
+    "description": "SINK TOP:SUPPLY INSET MIXER Sink Top:Fix 508x935mm stainless steel inset single bowl single drainer sink top, with mixer, waste, plug, chain, trap, service valves, make all connections, splashback, sealant, crossbond, test.",
+    "materials": "1x 2hole sink top pack complete (waste, trap, deck mixer tap) / check"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bffd0",
+    "code": "630703",
+    "description": "BASIN:RENEW COMPLETE WITH PEDESTAL TAPS Basin:Renew wash hand basin size ne 560x406mm complete with pedestal, taps, waste, service valves,chain, trap, make all connections, test, splashback, silicone sealant, crossbond.",
+    "materials": "1x  2 hole Basin & pedestal complete (waste, trap, taps)"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bffdb",
+    "code": "630901",
+    "description": "BATH:RENEW 1700MM STEEL WITH TAPS Bath:Renew upto 1700mm heavy duty steel bath complete with taps, waste, plug, chain, trap service valves, bath panels, splashback, silicone sealant, make all connections, crossbond, test.",
+    "materials": "1x Bath complete (waste, trap, taps) / check"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bffd9",
+    "code": "630719",
+    "description": "BASIN:RENEW CP POP-UP WASTE Basin:Renew 32mm chromium plated pop-up waste fitting to basin, with rod cover, fixing rod, bed, fix new waste, make connection to trap, connect pop-up fitting, test, remove/refix pedestal.",
+    "materials": "1x pop-up waste "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bffd7",
+    "code": "630715",
+    "description": "BASIN:RENEW PLUG AND CHAIN Basin:Renew rubber plug and chain to basin and secure to stud.",
+    "materials": "1x basin plug & chain "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bffd8",
+    "code": "630717",
+    "description": "BASIN:RENEW CP WASTE FITTING Basin:Renew 32mm chromium plated waste fitting to wash hand basin, complete with plug and chain, bed and fix new waste and make connection to trap, and test all newly made joints on completion.",
+    "materials": "1x basin waste with plug & chain "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bffdd",
+    "code": "630937",
+    "description": "BATH:RENEW 1700MM STEEL WITH SHOWER MIXER Bath:Renew upto 1700mm heavy duty steel bath complete with shower mixer, waste, plug, chain, trap service valves, bath panels, splashback, silicone sealant, make all connections, crossbond, test.",
+    "materials": "1x Bath complete (waste, mixer tap, trap)"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bffe2",
+    "code": "630919",
+    "description": "BATH:RENEW PLUG AND CHAIN Bath:Renew plug and chain to bath and securely fix to stud or overflow fitting.",
+    "materials": "1x bath plug & chain "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bffe4",
+    "code": "630923",
+    "description": "BATH:RENEW 42MM CP WASTE OVERFLOW Bath:Renew 42mm chromium plated waste and overflow fitting to bath with plug and chain, remove/refix bath, panel, framing etc, bed, fix, connect new waste and overflow, test, make good, renew sealant.",
+    "materials": "1x bath waste & over flow"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bffde",
+    "code": "630939",
+    "description": "BATH:RENEW 1700MM ACRYLIC WITH SHOWER MIXER Bath:Renew upto 1700mm long 8mm thick Acrylic bath complete with shower mixer, waste, plug, chain, service valves, bath panels, splashback, silicone sealant, connections, crossbond, test.",
+    "materials": "1x bath complete (waste, trap, mixer tap)"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bffe9",
+    "code": "630927",
+    "description": "BATH:TOUCH UP CHIP Bath:Prepare and touch up chip to any steel or cast iron bath including removing/refixing all fittings as necessary.",
+    "materials": "wood filler x 1"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bffed",
+    "code": "631101",
+    "description": "SHOWER TRAY:RENEW FIRECLAY COMPLETE Shower Tray:Renew shower tray with ne 830x830x180mm glazed fireclay shower tray, anti-slip finish with cp waste, connect to waste pipe, seal joint, make good, refix rails, doors etc.",
+    "materials": "1x shower tray / check "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bfffb",
+    "code": "631111",
+    "description": "SHOWER:RENEW HOSE AND SPRAY Shower:Renew any shower hose and spray including remove old and fix new and connect to mixing valve and remove waste and debris.",
+    "materials": "1x hose & spray "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bffff",
+    "code": "631119",
+    "description": "SHOWER:RENEW SHOWER KIT Shower:Renew shower kit comprising slide bar, handspray and flexible tube, disconnect and remove old and fit new kit and reconnect existing pipework and remove waste and debris.",
+    "materials": "1x shower slide bar"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649c0002",
+    "code": "631123",
+    "description": "SHOWER:RENEW RAILS AND CURTAINS Shower:Renew any size and type of shower rail and curtain, remove any defective rails, fix new rails with plastic plugs and matching non-ferrous screws remove and rehang curtains, make good finishes.",
+    "materials": "1x shower curtain "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649c0003",
+    "code": "631125",
+    "description": "SHOWER:RENEW CURTAIN Shower:Renew any type of shower curtain to existing rails including remove and refix rails as found expedient and remove waste and debris.",
+    "materials": "1x shower curtain"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649c0005",
+    "code": "631301",
+    "description": "TAP:RENEW PAIR BASIN PILLAR TAPS Tap:Renew pair 15mm cp pillar taps to basin, turn off/on water supply, disconnect, remove old, connect new taps, including remove and refix securely basin if required, test on completion.",
+    "materials": "1x pillar taps to basin"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649c0004",
+    "code": "631129",
+    "description": "SHOWER:RENEW RAILS Shower:Renew any size and type of shower rail including remove defective rails, fix new rails with plastic plugs and matching non-ferrous screws, remove and rehang curtains, make good to all finishes.",
+    "materials": "1x shower raiser "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649c0009",
+    "code": "631341",
+    "description": "TAP:INSTALL EXTERNAL BRASS BIB TAP Tap:Install external brass bib tap fixed to wall or backboard, hose union, head, draincock and valve, including extend service pipework, lag, builders work, make good etc.",
+    "materials": "1x garden tap "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649c0020",
+    "code": "631501",
+    "description": "SEALANT:RENEW TO SIDES AND ENDS OF BATH Sealant:Renew sanitaryware silicone sealant to side and ends of bath providing watertight joint.",
+    "materials": "1x white silicone ; "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649c0037",
+    "code": "640003",
+    "description": "BURST:REPAIR LEAKING FITTING NE 28MM Burst:Isolate/reinstate water supply, drain down, remove and renew leaking/defective fitting of any type ne 28mm dia, cut and thread pipes etc., reinstate pipe lagging, test, remove waste and debris.",
+    "materials": "1x 15mm cooper pipe 1m"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649c0022",
+    "code": "631505",
+    "description": "SEALANT:RENEW TO BASIN OR SINK Sealant:Renew sanitaryware silicone sealant to sides of basin or sink to provide watertight joint.",
+    "materials": "1x white silicone"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649c001a",
+    "code": "631373",
+    "description": "TAPS:RENEW WASH BASIN PAIR LOW FLOW 2-3 L/S Taps:Renew pair of 15mm wash basin taps with pair of 2-3 litres per second aerating low flow taps, turn off/on water, install, seal, test on completion, and remove waste and debris.",
+    "materials": "1x basin taps"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649c0030",
+    "code": "635015",
+    "description": "PIPE:RENEW OR PROVIDE BLANK CAP Pipe:Renew or provide blank cap to upto 22mm diameter copper pipe, including jointing to pipe, test.",
+    "materials": "2x WM blank cap "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649c0016",
+    "code": "631339",
+    "description": "TAP:RENEW SINK MIXER Tap:Renew mixer tap to sink top, turn off water supply, make all necessary connections to existing pipework, reinstate water supply and test on completion and remove waste and debris.",
+    "materials": "1x sink mixer tap"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649c0017",
+    "code": "631353",
+    "description": "TAP:RENEW BASIN MIXER Tap:Renew mixer tap to basin, turn off water supply, make all necessary connections existing pipework, reinstate water supply and test on completion and remove waste and debris.",
+    "materials": "1x basin mixer tap"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649c0015",
+    "code": "631337",
+    "description": "TAP:RENEW BATH MIXER WITH SHOWER ATTACHMENT Tap:Renew mixer tap with shower hose attachment to bath, turn off/on water supply, remove/refix bath panel and studding to gain access, test and made good.",
+    "materials": "1x bath mixer tap"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649c000b",
+    "code": "631303",
+    "description": "TAP:RENEW PAIR BASIN TAPS-CERAMIC DISC Tap:Renew pair 15mm cp ceramic disc pillar taps to basin, turn off/on water supply, disconnect, remove old, connect new taps, including remove and refix securely basin if required, test.",
+    "materials": "1 x pillar taps basin"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649c0023",
+    "code": "631507",
+    "description": "SEALANT:APPLY TO WORKTOP AND WALL Sealant:Seal joint between worktop and wall with silicone sealant and remove waste and debris.",
+    "materials": "1x white silicone "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649bffae",
+    "code": "630211",
+    "description": "SINK TOP:SUPPLY DEEP BOWL INSET TAPS Sink Top:Fix 508x935mm stainless steel inset single deep bowl single drainer sink top, with taps, waste, plug, chain, trap, service valves, make all connections, splashback, sealant, crossbond, test.",
+    "materials": "1x sink top complete / check (waste, trap, decking mixer tap)"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649c0014",
+    "code": "631335",
+    "description": "TAP:RENEW BATH MIXER Tap:Renew mixer tap to bath, turn off water supply, remove bath panel and studding to gain access, refix on completion, reinstate water supply, test and make good and remove waste and debris.",
+    "materials": "1 x bath mixer tap with hose & spray"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649c002b",
+    "code": "631907",
+    "description": "WASHING MACHINE:RENEW PAIR STOP TAPS Washing Machine:Renew or supply and fix new pair of in line stop taps including turn water off/on, drain/refill, fix new stop taps to existing pipework, adapt pipes, make joints, test.",
+    "materials": "2x WM black cap "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649c0019",
+    "code": "631371",
+    "description": "TAPS:RENEW KITCHEN SINK PAIR LOW FLOW 3-4 L/S Taps:Renew pair of 15mm kitchen sink taps with pair of 3-4 litres per second aerating low flow taps, turn off/on water, install, seal, test on completion, and remove waste and debris.",
+    "materials": "2x sink taps (single)"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649c0021",
+    "code": "631503",
+    "description": "SEALANT:RENEW TO SHOWER TRAY Sealant:Renew sanitaryware silicone sealant to sides of shower tray providing watertight joint.",
+    "materials": "1x white silicone "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649c002c",
+    "code": "635001",
+    "description": "PIPE:RENEW OR INSTALL 15MM COPPER Pipe:Renew or fix new any 15mm diameter pipe with copper pipe fixed with clips and including all made bends, connectors, fittings and any adaptors for jointing to pipes of other material.",
+    "materials": "2x 15mm 1/2 tap connector  ; 1x 15mm cooper pipe 1m"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649c0064",
+    "code": "670003",
+    "description": "TANK:RENEW INSULATION TO NE 227 LITRE Tank:Renew insulating jacket set fixed securely to cold water storage tank, over 113 and ne 227 litres and remove waste and debris.",
+    "materials": "1 x tank jacket"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649c00a8",
+    "code": "696003",
+    "description": "TOILET ROLL HOLDER:RENEW PLASTIC Toilet Roll Holder:Renew or supply and fix new proprietary plastic toilet roll holder securely fixed to structure including plugging as necessary.",
+    "materials": "1x toilet roll holder ; "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649c00ed",
+    "code": "707003",
+    "description": "BACKBOILER:DESCALE AND OVERHAUL Backboiler:Descale, overhaul and clean pipes during backboiler renewal.",
+    "materials": "1x spirit of salt"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649c0182",
+    "code": "830027",
+    "description": "SHOWER:INSTALL 9.5 KW COMPLETE Shower:Supply and install new 9.5 kW electric shower unit complete with advanced temperature stabiliser for constant temperature control, RCBO protection, 45amp DP switch, inline scale reducer.",
+    "materials": "1x electric shower "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649c0184",
+    "code": "830031",
+    "description": "SHOWER:INSTALL 9.5 KW AUDIO VISUAL COMPLETE Shower:Supply and install new 9.5 kW electric shower unit complete with advanced temperature stabiliser and audio visual warning devices, RCBO protection, 45amp DP switch, in line scale reducer.",
+    "materials": "1x Mira 9.5 KW electric shower "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649c0303",
+    "code": "961019",
+    "description": "SEAT:SUPPLY AND FIX HINGED WITH LEG Seat:Supply and fix proprietary heavy duty hinged shower seat with support leg, plugging and securely fixing to wall and floor as appropriate and all make good.",
+    "materials": "1x Shower seat"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649c02fe",
+    "code": "952001",
+    "description": "TAPS:RENEW WITH BASIN LEVERS - PAIR Taps:Renew pair of taps to wash hand basin with pair of 15mm ceramic disc lever taps including, turn water off/on, connect pipework, remove/refix basin, test on completion and make good.",
+    "materials": "1x basin taps"
+  },
+
+  {
+    "id": "63e63a68388ef1d5649c02da",
+    "code": "941003",
+    "description": "GRAB BAR:SUPPLY NE 610MM STRAIGHT Grab Bar:Supply and fix 32mm diameter, 2 flange proprietary straight grab bar ne 610mm long of any type specified by Client Representative, fixed to any background, all plugging, make good.",
+    "materials": "1x grab rail "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649c0349",
+    "code": "411209",
+    "description": "WALL:HACK OFF AND APPLY NEW SKIM COAT Wall:Hack off degraded plaster finish coat and apply new plaster skim coat including fair joint to any existing plaster finish and remove waste and debris.",
+    "materials": "1x easi filler "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649c0366",
+    "code": "442501",
+    "description": "SURFACES:APPLY BACTDET AND HALOPHEN Surfaces:Prepare, wash down with RLT Bactdet solution, prepare and apply one coat RLT Halophen solution to walls or ceilings in accordance with manufacturers data sheet, 2 coats of Biocheck matt.",
+    "materials": "2x flash red; "
+  },
+
+  {
+    "id": "63e63a68388ef1d5649c036b",
+    "code": "442511",
+    "description": "SURFACES:APPLY BACTDET TO EXISTING SURFACES Surfaces:Prepare, wash down existing surfaces of mould affected paper or plaster with RLT Bactdet solution to walls or ceilings in accordance with manufacturers technical data sheet.",
+    "materials": "2x red flash"
+  },
+
+  {
+    "id": "644ae4275933f0e4c48b1dfe",
+    "code": "VKITCR2",
+    "description": "NEW 2 BED KITCHEN",
+    "materials": "1x Polysafe grey / check; 1x Polysafe adhesive; 5x tile box; 2x tile adhesive; 1x white grout; 3x tile trim; 1x white emulsion; 1x magnolia silk; 1x gloss Dulux Once; 3x caulk"
+  },
+
+  {
+    "id": "644ae5945933f0e4c48b20ad",
+    "code": "VBATCR1",
+    "description": "NEW BATHROOM WITH BEIGE VINYL PLEASE",
+    "materials": "1x 1700  Bath complete (waste, trap, mixer tap white hose and spray); 1x shower raiser; 1x shower curtain; 1x telescopic shower rod; 1x 2 hole Basin & Pedestal complete (waste, trap, taps) ; 1x toilet seat; 5x tile box; 2x tile adhesive ; 3x tile trim; 1x white grout ; 1x Polysafe grey / check; 1x Polysafe adhesive; "
+  },
+
+  {
+    "id": "644ae82a9e1faa1f20c2dda7",
+    "code": "INVREC",
+    "description": "One bed sparkle clean",
+    "materials": "2x paper roll; Cleaning products ; 10x rubbish bags"
+  },
+
+  {
+    "id": "64538f7d95da2941bfec364b",
+    "code": "INVREC",
+    "description": "One bed sparkle clean",
+    "materials": "2x hartie; produse curatenie; "
+  },
+
+  {
+    "id": "645ac69a924b72e1cb81a085",
+    "code": "VKITCR3",
+    "description": "NEW 3 BED KITCHEN",
+    "materials": "5x tile box white  ; 2x tile adhesive; 1x tile spacers; 3x tile trim; 1x white grout; 1x Polysafe Grey 3.5m; 1x lipici linoleu; 1x CT1 Grey; 1x door threshold "
+  },
+
+  {
+    "id": "645ac69b924b72e1cb81a0ad",
+    "code": "VBATCR2",
+    "description": "NEW BATHROOM - OMIT WC",
+    "materials": "1x check / Bath complete (waste, trap, mixer tap white hose and spray); 1x 2 hole Basin & Pedestal complete (waste, trap, taps) ; 1x Polysafe Grey 1.3m; 4x tile box white; 1x tile adhesive; 1x white grout; 1x tile spacers; 3x tile trim; 1x shower raiser; 1x shower curtain; 1x telescopic shower rod; 1x door theshold; "
+  },
+
+  {
+    "id": "646bd7860647fb0e067b0427",
+    "code": "INVREC",
+    "description": "One bed sparkle clean",
+    "materials": "3x pencils"
+  },
+
+  {
+    "id": "646bd8440647fb0e067b04ff",
+    "code": "INVREC",
+    "description": "One bed sparkle clean",
+    "materials": "1x new material"
+  },
+
+  {
+    "id": "646bd8650647fb0e067b05c9",
+    "code": "INVREC",
+    "description": "One bed sparkle clean",
+    "materials": "2x sheets"
+  },
+
+  {
+    "id": "6488ec5ba03a8eb8607828c5",
+    "code": "VKITCR1",
+    "description": "NEW KITCHEN FOR BEDSIT",
+    "materials": "5x tile box; 2x tile adhesive ; 1x grout ; 3x tile trim; 1x tile spacers; 1x magnolia silk; 1x gloss; 1x Polysafe  / check; 1x vinyl glue; "
+  },
+
+  {
+    "id": "64b3b2615b18ec71c424e9db",
+    "code": "batcr1",
+    "description": "Model Bathroom",
+    "materials": "; ; 2x  paper roll; 1x Cleaning products; 1x  white emulsion; 1x  gloss Dulux Once; 1x Bath 1.00 complete (waste, trap, mixer tap) / check; 1x bath panel; 1x 2x2 timber 2.4m; 1x Shower raiser; 1x Shower rail & curtain ; 1x Basin & pedestal complete  (waste, trap, taps) / check; 1x Toilet closed coupler ; 1x toilet seat ; 3x bolofix 15mm; 2x bolofix 22mm; Polysafe / check; 1x vinyl adhesive ; 1x door bar; 5x Tiles box; 1x Tile adhesive ; 2x Tile trims; 1x Tile spacers; 1x white grout; 15x Rubbish bags; "
+  },
+
+  {
+    "id": "650b3466e4e6e327686b22e5",
+    "code": "411139",
+    "description": "Wall:Apply bonding agent to wall",
+    "materials": "1x Pva"
+  },
+
+  {
+    "id": "669766720318a197a2ada7fa",
+    "code": "KITCR1",
+    "description": "Kitchen composite rate: 1 bed/studio",
+    "materials": "1x  paper roll; 1x  Cleaning products; 1x white emulsion ; 1x magnolia emulsion ; 1x  undercoat; 1x  Gloss Dulux once; 1x white spirit ; 1x  easi filler; 1x Polysafe / check; 1x vinyl adhesive ; 1x door bar ; 2x Tap connector 15mm to 1/2; 1x 15mm cooper pipe 1m; 2x bolofix 15mm; 1x WM valve; 5x Tiles box; 1x Tile adhesive ; 3x Tile trims; 1x Tile spacers; 1x white grout; 10x roll Rubbish bags"
+  },
+
+  {
+    "id": "669766720318a197a2ada802",
+    "code": "21007",
+    "description": "GATE:REPAIR AND EASE AND ADJUST TIMBER GATE",
+    "materials": "1x timber gate / check"
+  },
+
+  {
+    "id": "66a1f8d4d76fd18f2a15c77b",
+    "code": "27309",
+    "description": "HANDRAIL:RENEW MOPSTICK HANDRAIL",
+    "materials": "1x handrail & fittings / check"
+  },
+
+  {
+    "id": "66a9ee1b50a6a388c30bbd8b",
+    "code": "KITCR2",
+    "description": "Kitchen composite rate: 2 bed",
+    "materials": "2x  paper roll; 1x  Cleaning products; 1x white emulsion ; 1x magnolia emulsion ; 1x  undercoat; 1x  Gloss Dulux once; 1x white spirit ; 1x  easi filler; 1x Polysafe / check; 1x vinyl adhesive ; 1x door bar; 2x Tap connector 15mm to 3/4; 2x bolofix 22mm; 1x WM valve; 5x Tiles box; 2x Tile adhesive ; 3x Tile trims; 1x Tile spacers; 1x white grout; 1x roll Rubbish bags; "
+  }
+]

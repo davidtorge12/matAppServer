@@ -4,12 +4,12 @@ const materialSchema = new mongoose.Schema({
   material: {
     type: String,
     required: true,
-    unique : true,
+    unique: true,
     dropDups: true,
   },
   price: {
-    type: String, 
-    default: '0'
+    type: String,
+    default: "0",
   },
   createdAt: { type: Date, default: () => Date.now() },
   updatedAt: { type: Date, default: () => Date.now() },

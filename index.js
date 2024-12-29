@@ -3,7 +3,6 @@ import mongoose from "mongoose";
 import Codes from "./schemas/Codes.js";
 import Material from "./schemas/Material.js";
 import cors from "cors";
-
 import { config } from "dotenv";
 
 config();
@@ -159,23 +158,56 @@ app.post("/set-price", async (req, res) => {
 });
 
 app.post("/vo", async (req, res) => {
-  if (req.body.length) {
-    const voArr = req.body;
+  if (!req.body) return res.send("invalid request");
+  const { vo: voString } = req.body;
 
-    voArr.forEach(async (vo) => {
-      const oldInfo = await Codes.findOne({ code: vo.code }).info;
-      await Codes.updateOne(
-        { code: vo.code },
-        { info: vo.info || oldInfo || "" }
-      );
-    });
+  let response = "";
+  const VOArr = voString.split("\n");
 
-    res.send("done");
-  }
+  const result = await VOArr.forEach(async (vo, index) => {
+    const isLatest = index === VOArr.length - 1;
+    const voTrimmed = vo.trim();
+    if (voTrimmed) {
+      const codesFound = await Codes.find(
+        { $text: { $search: voTrimmed } },
+        { score: { $meta: "textScore" } }
+      )
+        .sort({ score: { $meta: "textScore" } })
+        .limit(1);
+
+      if (codesFound?.length && codesFound[0].code) {
+        response += `${codesFound[0].code} ${voTrimmed}\n`;
+      } else {
+        response += `     ${voTrimmed}\n`;
+      }
+    }
+
+    if (isLatest) {
+      res.send(JSON.stringify({ vo: response }));
+      return true;
+    }
+  });
 });
 
 const run = async () => {
-  await Codes.updateMany({}, { info: "" });
+  // writeFileSync("db.json", "[", { flag: "a+" });
+  // for await (let code of codes) {
+  //   if (code.materials) {
+  //     writeFileSync(
+  //       "db.json",
+  //       `
+  //     {
+  //       "id": "${code._id}",
+  //       "code": "${code.code}",
+  //       "description": "${code.description.split("\n").join(" ")}",
+  //       "materials": "${code.materials.split("\n").join("; ")}",
+  //     },
+  //     `,
+  //       { flag: "a+" }
+  //     );
+  //   }
+  // }
+  // writeFileSync("db.json", "]", { flag: "a+" });
 };
 
 // run();
