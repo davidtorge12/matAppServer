@@ -166,7 +166,16 @@ app.post("/vo", async (req, res) => {
 
   const result = await VOArr.forEach(async (vo, index) => {
     const isLatest = index === VOArr.length - 1;
-    const voTrimmed = vo.trim();
+    let voTrimmed = vo.trim().toString();
+    if (voTrimmed.startsWith("x ")) {
+      voTrimmed = voTrimmed.replace("x ", "");
+    }
+    if (voTrimmed.startsWith("X ")) {
+      voTrimmed = voTrimmed.replace("X ", "");
+    }
+    voTrimmed = voTrimmed.trim();
+
+    console.log(voTrimmed);
     if (voTrimmed) {
       const codesFound = await Codes.find(
         { $text: { $search: voTrimmed } },
@@ -176,9 +185,9 @@ app.post("/vo", async (req, res) => {
         .limit(1);
 
       if (codesFound?.length && codesFound[0].code) {
-        response += `${codesFound[0].code} ${voTrimmed}\n`;
+        response += `${codesFound[0].code} ${vo.trim()}\n`;
       } else {
-        response += `     ${voTrimmed}\n`;
+        response += `       ${vo.trim()}\n`;
       }
     }
 
