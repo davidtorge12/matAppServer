@@ -188,7 +188,7 @@ app.post("/vo", async (req, res) => {
         .limit(1);
 
       if (codesFound?.length && codesFound[0].code) {
-        const theCode = codesFound[0];
+        const theCode = codesFound[0].code;
         response += `${theCode} ${vo.trim()}\n`;
       } else {
         response += `       ${vo.trim()}\n`;
