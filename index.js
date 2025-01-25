@@ -4,6 +4,7 @@ import Codes from "./schemas/Codes.js";
 import Material from "./schemas/Material.js";
 import cors from "cors";
 import { config } from "dotenv";
+import fs from "fs";
 
 config();
 
@@ -164,19 +165,21 @@ app.post("/vo", async (req, res) => {
   let response = "";
   const VOArr = voString.split("\n");
 
-  const result = await VOArr.forEach(async (vo, index) => {
-    const isLatest = index === VOArr.length - 1;
-    let voTrimmed = vo.trim().toString();
-    if (voTrimmed.startsWith("x ")) {
-      voTrimmed = voTrimmed.replace("x ", "");
-    }
-    if (voTrimmed.startsWith("X ")) {
-      voTrimmed = voTrimmed.replace("X ", "");
-    }
-    voTrimmed = voTrimmed.trim();
+  for await (let vo of VOArr) {
+    const startWithX = vo.startsWith("x ") || vo.startsWith("X ");
 
-    console.log(voTrimmed);
-    if (voTrimmed) {
+    if (!vo.trim()) {
+      response += "\n";
+      continue;
+    }
+
+    if (!startWithX) {
+      response += `${vo}\n`;
+    }
+
+    if (startWithX) {
+      const x = vo.slice(0, 2);
+      const voTrimmed = vo.replace(x, "").trim();
       const codesFound = await Codes.find(
         { $text: { $search: voTrimmed } },
         { score: { $meta: "textScore" } }
@@ -185,38 +188,73 @@ app.post("/vo", async (req, res) => {
         .limit(1);
 
       if (codesFound?.length && codesFound[0].code) {
-        response += `${codesFound[0].code} ${vo.trim()}\n`;
+        const theCode = codesFound[0];
+        response += `${theCode} ${vo.trim()}\n`;
       } else {
         response += `       ${vo.trim()}\n`;
       }
     }
+  }
 
-    if (isLatest) {
-      res.send(JSON.stringify({ vo: response }));
-      return true;
-    }
-  });
+  res.send(JSON.stringify({ vo: response }));
+
+  // const result = await VOArr.forEach(async (vo, index) => {
+  //   const isLatest = index === VOArr.length - 1;
+  //   let voTrimmed = vo.trim().toString();
+  //   if (voTrimmed.startsWith("x ")) {
+  //     voTrimmed = voTrimmed.replace("x ", "");
+  //   }
+  //   if (voTrimmed.startsWith("X ")) {
+  //     voTrimmed = voTrimmed.replace("X ", "");
+  //   }
+  //   voTrimmed = voTrimmed.trim();
+
+  //   console.log(voTrimmed);
+  //   if (voTrimmed) {
+  //     const codesFound = await Codes.find(
+  //       { $text: { $search: voTrimmed } },
+  //       { score: { $meta: "textScore" } }
+  //     )
+  //       .sort({ score: { $meta: "textScore" } })
+  //       .limit(1);
+
+  //     if (codesFound?.length && codesFound[0].code) {
+  //       response += `${codesFound[0].code} ${vo.trim()}\n`;
+  //     } else {
+  //       response += `       ${vo.trim()}\n`;
+  //     }
+  //   }
+
+  //   if (isLatest) {
+  //     res.send(JSON.stringify({ vo: response }));
+  //     return true;
+  //   }
+  // });
 });
 
 const run = async () => {
-  // writeFileSync("db.json", "[", { flag: "a+" });
-  // for await (let code of codes) {
-  //   if (code.materials) {
-  //     writeFileSync(
-  //       "db.json",
-  //       `
-  //     {
-  //       "id": "${code._id}",
-  //       "code": "${code.code}",
-  //       "description": "${code.description.split("\n").join(" ")}",
-  //       "materials": "${code.materials.split("\n").join("; ")}",
-  //     },
-  //     `,
-  //       { flag: "a+" }
-  //     );
-  //   }
-  // }
-  // writeFileSync("db.json", "]", { flag: "a+" });
+  try {
+    const data = fs.readFileSync("voDbUpdated.text", "utf-8");
+    const lines = data.split("\n");
+
+    await Codes.updateMany({}, { info: "" });
+    for (const line of lines) {
+      const [code, description] = line.split(" x ");
+
+      if (code && description) {
+        const existingCode = await Codes.findOne({ code });
+
+        if (existingCode) {
+          existingCode.info = description;
+          await existingCode.save();
+        }
+      }
+    }
+
+    console.log("Data inserted successfully");
+  } catch (error) {
+    console.error("Error inserting data:", error);
+  }
 };
 
 // run();
