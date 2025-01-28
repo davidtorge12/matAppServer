@@ -179,7 +179,8 @@ app.post("/vo", async (req, res) => {
 
     if (startWithX) {
       const x = vo.slice(0, 2);
-      const voTrimmed = vo.replace(x, "").trim();
+      let voTrimmed = vo.replace(x, "").split("-")[0].trim();
+
       const codesFound = await Codes.find(
         { $text: { $search: voTrimmed } },
         { score: { $meta: "textScore" } }
