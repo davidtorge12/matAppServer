@@ -5,7 +5,6 @@ const materialSchema = new mongoose.Schema({
     type: String,
     required: true,
     unique: true,
-    dropDups: true,
   },
   price: {
     type: String,
