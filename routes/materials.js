@@ -1,92 +1,63 @@
 import express from "express";
+import { parsePrice } from "../lib/price.js";
+import { badRequest, route } from "../lib/route.js";
 import Material from "../schemas/Material.js";
 
 const router = express.Router();
 
-router.get("/get-price", async (req, res) => {
-  try {
-    const name = req.query.material;
-    if (!name || typeof name !== "string") {
-      return res.status(400).json({ error: "material query required" });
+/**
+ * Prices for a whole materials list. One `$in` query, where the previous version
+ * ran a separate `find` for every name — a 40-material job meant 40 round trips
+ * before the list could render a single price.
+ *
+ * Answers with numbers. `.lean()` skips Mongoose casting, so a row still holding a
+ * legacy string is read as raw and normalised by `parsePrice` — the endpoint
+ * behaves the same before and after the price migration.
+ */
+router.post(
+  "/get-prices",
+  route(async (req, res) => {
+    const requested = req.body?.obj;
+    if (!requested || typeof requested !== "object") {
+      throw badRequest("expected { obj: { [material]: units } }");
     }
 
-    const material = await Material.findOne({ material: name });
-    if (!material) {
-      return res.status(404).json({ error: "material not found" });
+    const names = Object.keys(requested).filter((name) => name.trim());
+    if (!names.length) {
+      return res.json({});
     }
 
-    res.json(material);
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: "failed to load price" });
-  }
-});
+    const found = await Material.find(
+      { material: { $in: names } },
+      { material: 1, price: 1 },
+    ).lean();
 
-router.post("/get-prices", async (req, res) => {
-  try {
-    const matArr = Object.keys(req.body?.obj || {});
-    const resArr = {};
-
-    for (const material of matArr) {
-      const matDb = await Material.find({ material });
-      for (const row of matDb) {
-        resArr[row.material] = row.price;
-      }
+    const prices = {};
+    for (const row of found) {
+      prices[row.material] = parsePrice(row.price);
     }
 
-    res.json(resArr);
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: "failed to load prices" });
-  }
-});
+    res.json(prices);
+  }),
+);
 
-router.post("/set-prices", async (req, res) => {
-  try {
-    const incoming = Array.isArray(req.body) ? req.body : [];
-    if (!incoming.length) {
-      return res.status(400).json({ error: "expected an array of materials" });
-    }
-
-    const matsArray = [];
-    for (const mat of incoming) {
-      if (!mat?.material) {
-        continue;
-      }
-
-      const updated = await Material.findOneAndUpdate(
-        { material: mat.material },
-        { price: mat.price || "0", updatedAt: new Date() },
-        { upsert: true, new: true }
-      );
-      matsArray.push(updated);
-    }
-
-    res.json(matsArray);
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: "failed to set prices" });
-  }
-});
-
-router.post("/set-price", async (req, res) => {
-  try {
-    const { material, price } = req.body || {};
-    if (!material) {
-      return res.status(400).json({ error: "material required" });
+router.post(
+  "/set-price",
+  route(async (req, res) => {
+    const { material, price } = req.body ?? {};
+    const name = typeof material === "string" ? material.trim() : "";
+    if (!name) {
+      throw badRequest("material required");
     }
 
     const updated = await Material.findOneAndUpdate(
-      { material },
-      { price, updatedAt: new Date() },
-      { upsert: true, new: true }
+      { material: name },
+      { price: parsePrice(price) },
+      { upsert: true, new: true, lean: true },
     );
 
-    res.json(updated);
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: "failed to set price" });
-  }
-});
+    res.json({ material: updated.material, price: parsePrice(updated.price) });
+  }),
+);
 
 export default router;

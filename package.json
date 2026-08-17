@@ -1,11 +1,22 @@
 {
   "name": "matappserver",
   "version": "1.0.0",
-  "description": "",
+  "description": "Express + Mongo API for the materials takeoff tool.",
   "main": "index.js",
   "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "test": "node --test \"lib/*.test.js\" \"routes/*.test.js\"",
+    "lint": "eslint .",
+    "format": "prettier --write \"**/*.js\" \"*.json\"",
+    "format:check": "prettier --check \"**/*.js\" \"*.json\"",
+    "check": "npm run lint && npm test",
+    "import:vo": "node scripts/importVoInfo.js",
+    "migrate:prices": "node scripts/migratePrices.js"
   },
   "keywords": [],
   "author": "",
@@ -14,10 +25,13 @@
     "cors": "2.8.6",
     "dotenv": "16.6.1",
     "express": "4.22.2",
-    "mongoose": "8.24.3",
-    "node-xlsx": "0.21.0"
+    "mongoose": "8.24.3"
   },
   "devDependencies": {
-    "nodemon": "^3.1.14"
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.8.1",
+    "globals": "^17.11.0",
+    "nodemon": "^3.1.14",
+    "prettier": "^3.9.6"
   }
 }

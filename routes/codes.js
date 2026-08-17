@@ -1,102 +1,153 @@
 import express from "express";
+import mongoose from "mongoose";
+import { MAX_CODES_PER_REQUEST, PAGE_SIZE } from "../lib/constants.js";
+import { badRequest, notFound, route } from "../lib/route.js";
 import Codes from "../schemas/Codes.js";
 
 const router = express.Router();
 
-router.post("/codes", async (req, res) => {
-  try {
-    const incoming = Array.isArray(req.body) ? req.body : [];
-    if (!incoming.length) {
-      return res.status(400).json({ error: "expected an array of codes" });
-    }
+function text(value) {
+  return typeof value === "string" ? value.trim() : "";
+}
 
-    for (const c of incoming) {
-      if (!c?.code) {
-        continue;
-      }
-
-      const existing = await Codes.findOne({ code: c.code });
-      if (existing) {
-        const materials =
-          c.materials !== "" && c.materials != null
-            ? c.materials
-            : existing.materials;
-        const description =
-          c.description && c.description !== existing.description
-            ? c.description
-            : existing.description;
-
-        await Codes.updateOne(
-          { _id: existing._id },
-          { description, materials, updatedAt: new Date() }
-        );
-      } else {
-        await Codes.create({
-          code: c.code,
-          description: c.description,
-          materials: "",
-        });
-      }
-    }
-
-    const codes = [];
-    for (const c of incoming) {
-      const codeToAdd = await Codes.findOne({ code: c.code });
-      if (codeToAdd) {
-        codes.push(codeToAdd);
-      }
-    }
-
-    res.json(codes);
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: "failed to upsert codes" });
+/** Normalises the upload payload, dropping rows with no usable code. */
+export function normaliseCodes(body) {
+  if (!Array.isArray(body)) {
+    return [];
   }
-});
 
-function parsePage(value) {
+  return body
+    .map((row) => ({
+      code: text(row?.code),
+      description: text(row?.description),
+      materials: text(row?.materials),
+    }))
+    .filter((row) => row.code);
+}
+
+/**
+ * One upsert per distinct code. A job sheet regularly lists the same SOR code on
+ * several lines, and `bulkWrite` rejects a batch that touches one document
+ * twice, so duplicates collapse here.
+ *
+ * A field can appear in `$set` or `$setOnInsert` but not both, hence the split:
+ * a value the upload actually supplies overwrites what is stored, and anything
+ * it leaves blank is only seeded when the document is created. That preserves
+ * the previous behaviour of never clearing a stored description or materials
+ * list with an empty cell from a spreadsheet.
+ */
+export function buildCodeUpserts(rows) {
+  const byCode = new Map();
+  for (const row of rows) {
+    byCode.set(row.code, row);
+  }
+
+  return [...byCode.values()].map((row) => {
+    const set = {};
+    const setOnInsert = { code: row.code };
+
+    if (row.description) {
+      set.description = row.description;
+    } else {
+      setOnInsert.description = "";
+    }
+
+    if (row.materials) {
+      set.materials = row.materials;
+    } else {
+      setOnInsert.materials = "";
+    }
+
+    return {
+      updateOne: {
+        filter: { code: row.code },
+        update: {
+          ...(Object.keys(set).length ? { $set: set } : {}),
+          $setOnInsert: setOnInsert,
+        },
+        upsert: true,
+      },
+    };
+  });
+}
+
+router.post(
+  "/codes",
+  route(async (req, res) => {
+    const rows = normaliseCodes(req.body);
+    if (!rows.length) {
+      throw badRequest("expected an array of codes");
+    }
+    if (rows.length > MAX_CODES_PER_REQUEST) {
+      throw badRequest(`at most ${MAX_CODES_PER_REQUEST} codes per request`);
+    }
+
+    const operations = buildCodeUpserts(rows);
+    await Codes.bulkWrite(operations);
+
+    // Two round trips total. The previous version ran a findOne plus a write per
+    // row and then a second findOne per row, so a 50-row chunk cost up to 150.
+    const saved = await Codes.find({
+      code: { $in: operations.map((op) => op.updateOne.filter.code) },
+    });
+    const byCode = new Map(saved.map((doc) => [doc.code, doc]));
+
+    // Answered in upload order, repeats included, because the client pairs each
+    // returned code with the sheet row it came from.
+    res.json(rows.map((row) => byCode.get(row.code)).filter(Boolean));
+  }),
+);
+
+export function parsePage(value) {
   const page = Number.parseInt(String(value ?? "1"), 10);
   return Number.isInteger(page) && page > 0 ? page : 1;
 }
 
-router.get("/latest", async (req, res) => {
-  try {
-    const pageSize = 20;
+router.get(
+  "/latest",
+  route(async (req, res) => {
     const page = parsePage(req.query.page);
-    const skip = (page - 1) * pageSize;
     const [items, total] = await Promise.all([
-      Codes.find({}).sort({ updatedAt: -1 }).skip(skip).limit(pageSize),
-      Codes.countDocuments({}),
+      Codes.find({})
+        .sort({ updatedAt: -1 })
+        .skip((page - 1) * PAGE_SIZE)
+        .limit(PAGE_SIZE)
+        .lean(),
+      Codes.estimatedDocumentCount(),
     ]);
-    res.json({ items, total, page, pageSize });
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: "failed to load codes" });
-  }
-});
 
-router.post("/code", async (req, res) => {
-  try {
+    res.json({ items, total, page, pageSize: PAGE_SIZE });
+  }),
+);
+
+router.post(
+  "/code",
+  route(async (req, res) => {
     const { id, materials } = req.body?.param ?? {};
     if (!id) {
-      return res.status(400).json({ error: "id required" });
+      throw badRequest("id required");
+    }
+    // Without this check a malformed id raises a Mongoose CastError, which the
+    // error handler can only report as a 500.
+    if (!mongoose.isValidObjectId(id)) {
+      throw badRequest("invalid id");
+    }
+    if (typeof materials !== "string") {
+      throw badRequest("materials must be a string");
     }
 
     const updated = await Codes.findByIdAndUpdate(
       id,
-      { materials, updatedAt: new Date() },
-      { new: true }
+      { materials: materials.trim() },
+      { new: true },
     );
 
     if (!updated) {
-      return res.status(404).json({ error: "code not found" });
+      throw notFound("code not found");
     }
 
     res.json([updated]);
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: "failed to update code" });
-  }
-});
+  }),
+);
 
 export default router;
