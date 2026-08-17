@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "nodemon index.js",
     "start": "node index.js",
-    "test": "node --test \"lib/*.test.js\" \"routes/*.test.js\"",
+    "test": "node --test \"lib/*.test.js\" \"middleware/*.test.js\" \"routes/*.test.js\"",
     "lint": "eslint .",
     "format": "prettier --write \"**/*.js\" \"*.json\"",
     "format:check": "prettier --check \"**/*.js\" \"*.json\"",

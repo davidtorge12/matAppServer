@@ -62,10 +62,11 @@ async function start() {
   });
 }
 
-start();
+// Vercel imports this module and invokes `app` per request. Calling listen()
+// (and process.exit on a failed Mongo connect) races the handler and shows up
+// as FUNCTION_INVOCATION_FAILED on otherwise healthy routes.
+if (!process.env.VERCEL) {
+  start();
+}
 
-// Also exported, because that is the interface a serverless host expects: it
-// imports this module and calls the app per request rather than connecting to a
-// listening port. `withDb` opens the connection on the first request either way,
-// so both entry paths work.
 export default app;

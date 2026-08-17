@@ -1,10 +1,26 @@
 import { timingSafeEqual } from "node:crypto";
 import cors from "cors";
 
-function parseOrigins(value) {
+export function normalizeOrigin(value) {
+  if (typeof value !== "string") {
+    return "";
+  }
+
+  let origin = value.trim();
+  if (
+    (origin.startsWith('"') && origin.endsWith('"')) ||
+    (origin.startsWith("'") && origin.endsWith("'"))
+  ) {
+    origin = origin.slice(1, -1).trim();
+  }
+
+  return origin.replace(/\/+$/, "");
+}
+
+export function parseOrigins(value) {
   return (value || "")
     .split(",")
-    .map((origin) => origin.trim())
+    .map((origin) => normalizeOrigin(origin))
     .filter(Boolean);
 }
 
@@ -12,21 +28,48 @@ export function corsOrigins() {
   return parseOrigins(process.env.CORS_ORIGIN);
 }
 
+export function originAllowed(requestOrigin, configured = process.env.CORS_ORIGIN) {
+  const allowed = parseOrigins(configured);
+  if (!allowed.length || allowed.includes("*")) {
+    return true;
+  }
+  if (!requestOrigin) {
+    return true;
+  }
+  return allowed.includes(normalizeOrigin(requestOrigin));
+}
+
+/**
+ * Options passed to the `cors` package. `origin: ['*']` is not a wildcard — it
+ * looks for a browser Origin header that is literally `*`, so no real site
+ * gets `Access-Control-Allow-Origin`. An empty list or `*` uses cors defaults
+ * (`origin: '*'`) instead.
+ */
+export function corsConfig(value = process.env.CORS_ORIGIN) {
+  const allowed = parseOrigins(value);
+  if (!allowed.length || allowed.includes("*")) {
+    return {};
+  }
+  return { origin: allowed };
+}
+
 export function applyCors(app) {
   const allowed = corsOrigins();
 
-  if (allowed.length) {
-    app.use(cors({ origin: allowed }));
-    return;
+  if (!allowed.length) {
+    // No allowlist configured. Outside production that is convenient; in
+    // production it would let any site on the internet read the API with a key
+    // lifted from the frontend bundle, so `index.js` refuses to start instead.
+    console.warn(
+      "CORS_ORIGIN is not set — allowing every origin. Set it before deploying.",
+    );
+  } else if (allowed.includes("*")) {
+    console.warn(
+      "CORS_ORIGIN=* allows every origin. Set it to the frontend URL before deploying.",
+    );
   }
 
-  // No allowlist configured. Outside production that is convenient; in
-  // production it would let any site on the internet read the API with a key
-  // lifted from the frontend bundle, so `index.js` refuses to start instead.
-  console.warn(
-    "CORS_ORIGIN is not set — allowing every origin. Set it before deploying.",
-  );
-  app.use(cors());
+  app.use(cors(corsConfig()));
 }
 
 /** Constant-time compare, so a wrong key cannot be narrowed down byte by byte. */
