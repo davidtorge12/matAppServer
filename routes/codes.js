@@ -54,10 +54,21 @@ router.post("/codes", async (req, res) => {
   }
 });
 
-router.get("/latest", async (_req, res) => {
+function parsePage(value) {
+  const page = Number.parseInt(String(value ?? "1"), 10);
+  return Number.isInteger(page) && page > 0 ? page : 1;
+}
+
+router.get("/latest", async (req, res) => {
   try {
-    const codes = await Codes.find({}).sort({ updatedAt: -1 }).limit(20);
-    res.json(codes);
+    const pageSize = 20;
+    const page = parsePage(req.query.page);
+    const skip = (page - 1) * pageSize;
+    const [items, total] = await Promise.all([
+      Codes.find({}).sort({ updatedAt: -1 }).skip(skip).limit(pageSize),
+      Codes.countDocuments({}),
+    ]);
+    res.json({ items, total, page, pageSize });
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: "failed to load codes" });
