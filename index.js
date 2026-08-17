@@ -11,22 +11,47 @@ config();
 
 const isProduction = process.env.NODE_ENV === "production";
 
+/**
+ * Configuration is checked, but never with `process.exit()` at import time.
+ * On a serverless host this module is imported per cold start and the exported app
+ * is invoked per request — exiting there is not "refusing to start", it is a crash
+ * that returns no HTTP response at all, which the browser reports only as
+ * "Failed to fetch". A misconfigured deploy has to answer with something readable.
+ */
+const fatalConfigErrors = [];
+
 if (!process.env.API_KEY) {
-  console.error("API_KEY is not set. Refusing to start an open API.");
-  process.exit(1);
+  // Fatal: serving an unauthenticated API is worse than being unavailable.
+  fatalConfigErrors.push("API_KEY is not set");
 }
 
-// The API key ships inside the frontend bundle, so the origin allowlist is what
-// actually stops an arbitrary site from using it. Missing in production is a
-// misconfiguration, not a default worth falling back to.
+// Not fatal. The API key ships inside the frontend bundle, so this allowlist is
+// what really restricts access — but taking a working tool offline over it is the
+// wrong trade, so it warns loudly and stays permissive instead.
 if (isProduction && !corsOrigins().length) {
-  console.error("CORS_ORIGIN is not set. Refusing to start an open API.");
-  process.exit(1);
+  console.error(
+    "CORS_ORIGIN is not set: every origin is allowed. Set it to your frontend " +
+      "origin and redeploy.",
+  );
 }
 
 const app = express();
 
+// Applied first, and unconditionally, so even an error response carries the
+// headers the browser needs in order to read it.
 applyCors(app);
+
+if (fatalConfigErrors.length) {
+  for (const problem of fatalConfigErrors) {
+    console.error(`Configuration error: ${problem}`);
+  }
+
+  app.use((_req, res) => {
+    res.status(503).json({
+      error: `Server is misconfigured: ${fatalConfigErrors.join("; ")}`,
+    });
+  });
+}
 // Default is 100kb. A job upload posts codes in chunks of 50, so this is
 // generous, and a cap keeps a hostile body from being buffered in full.
 app.use(express.json({ limit: "1mb" }));
@@ -49,6 +74,13 @@ app.use(errorHandler);
 
 async function start() {
   const port = process.env.PORT || 3000;
+
+  // Failing fast is useful here and only here: a local run is a long-lived process
+  // a developer is watching, not a function serving live traffic.
+  if (fatalConfigErrors.length) {
+    console.error("Refusing to start. Fix the configuration errors above.");
+    process.exit(1);
+  }
 
   try {
     await connectDb(process.env.MONGO_DB_URL);

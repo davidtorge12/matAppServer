@@ -57,9 +57,10 @@ export function applyCors(app) {
   const allowed = corsOrigins();
 
   if (!allowed.length) {
-    // No allowlist configured. Outside production that is convenient; in
-    // production it would let any site on the internet read the API with a key
-    // lifted from the frontend bundle, so `index.js` refuses to start instead.
+    // No allowlist configured, so every origin is allowed. In production that
+    // means any site can use the API with a key lifted from the frontend bundle —
+    // but it warns rather than refusing, because taking a working tool offline
+    // over a config gap is the worse outcome.
     console.warn(
       "CORS_ORIGIN is not set — allowing every origin. Set it before deploying.",
     );
@@ -86,11 +87,11 @@ function matches(provided, expected) {
 export function requireApiKey(req, res, next) {
   const expected = process.env.API_KEY;
 
-  // Fail closed. `index.js` already refuses to start without a key, so reaching
-  // here with none means something is misconfigured — do not wave the request
-  // through.
+  // Fail closed. `index.js` answers 503 for every route when the key is missing,
+  // so reaching here without one means something is badly misconfigured — never
+  // wave the request through.
   if (!expected) {
-    return res.status(500).json({ error: "server misconfigured" });
+    return res.status(503).json({ error: "server misconfigured" });
   }
 
   if (matches(req.headers["x-api-key"], expected)) {
