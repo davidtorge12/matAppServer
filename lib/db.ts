@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import type { RequestHandler } from "express";
-import { ensureVoSearchIndex } from "../schemas/Codes.js";
+import { ensureCodeIndex, ensureVoSearchIndex } from "../schemas/Codes.js";
 
 /**
  * Serverless hosts start a fresh module instance on every cold start and reuse
@@ -34,6 +34,7 @@ export async function connectDb(
   const store = cache();
   if (store.conn) {
     await ensureVoSearchIndex();
+    await ensureCodeIndex();
     return store.conn;
   }
 
@@ -58,6 +59,7 @@ export async function connectDb(
 
   store.conn = await store.promise;
   await ensureVoSearchIndex();
+  await ensureCodeIndex();
   return store.conn;
 }
 

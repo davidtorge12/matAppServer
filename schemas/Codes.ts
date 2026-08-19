@@ -1,4 +1,5 @@
 import mongoose, { type InferSchemaType } from "mongoose";
+import { codeIndexAction } from "../lib/dedupeCodes.js";
 
 const codesSchema = new mongoose.Schema(
   {
@@ -20,11 +21,9 @@ const codesSchema = new mongoose.Schema(
 
 export type CodesDoc = InferSchemaType<typeof codesSchema>;
 
-// Every route looks a code up by `code`; without this index each one is a
-// collection scan. Not unique on purpose: existing data may already hold
-// duplicates from before upserts were used, and a unique index fails to build
-// against them. See docs/REVIEW.md for the de-duplication step.
-codesSchema.index({ code: 1 });
+// `{ code: 1 }` is created in `ensureCodeIndex`, unique once duplicates are
+// gone. Declaring unique here would make `createIndexes()` fail the whole boot
+// while old duplicate rows still exist.
 
 // Backs the `$text` search used by the VO matcher. Both the catalogue wording
 // (`info`) and the latest job-sheet wording (`description`) are searchable.
@@ -33,6 +32,7 @@ codesSchema.index({ info: "text", description: "text" });
 const CodesModel = mongoose.model("Codes", codesSchema);
 
 const VO_INDEX_READY = Symbol.for("matapp.voSearchIndex");
+const CODE_INDEX_READY = Symbol.for("matapp.codeIndex");
 
 function mongoErrorFields(error: unknown): { code?: number; codeName?: string } {
   if (typeof error !== "object" || error === null) {
@@ -72,6 +72,62 @@ export async function ensureVoSearchIndex(): Promise<void> {
 
   await CodesModel.createIndexes();
   globals[VO_INDEX_READY] = true;
+}
+
+/**
+ * Unique on `code` so a second insert cannot recreate the duplicates upserts
+ * already prevent. If leftover dupes (or blank codes) still exist, Mongo
+ * refuses the unique index — we keep the non-unique one and log, so the API
+ * still boots. Run `npm run dedupe:codes -- --apply` then the next cold start
+ * will promote it.
+ */
+export async function ensureCodeIndex(): Promise<boolean> {
+  const globals = globalThis as Record<symbol, unknown>;
+  if (globals[CODE_INDEX_READY] === "unique") {
+    return true;
+  }
+  if (globals[CODE_INDEX_READY] === "plain") {
+    return false;
+  }
+
+  const indexes = await CodesModel.collection.indexes();
+  const action = codeIndexAction(indexes);
+
+  if (action.action === "ok") {
+    globals[CODE_INDEX_READY] = "unique";
+    return true;
+  }
+
+  if (action.action === "replace") {
+    try {
+      await CodesModel.collection.dropIndex(action.name);
+    } catch (error) {
+      const mongoError = mongoErrorFields(error);
+      if (mongoError.code !== 27 && mongoError.codeName !== "IndexNotFound") {
+        throw error;
+      }
+    }
+  }
+
+  try {
+    await CodesModel.collection.createIndex({ code: 1 }, { unique: true });
+    globals[CODE_INDEX_READY] = "unique";
+    return true;
+  } catch (error) {
+    const mongoError = mongoErrorFields(error);
+    if (mongoError.code !== 11000 && mongoError.codeName !== "DuplicateKey") {
+      throw error;
+    }
+
+    console.error(
+      "Codes.code is not unique yet, so the unique index was not created. " +
+        "Run `npm run dedupe:codes -- --apply` and redeploy. Lookups stay " +
+        "indexed without uniqueness until then.",
+    );
+    await CodesModel.collection.createIndex({ code: 1 });
+    globals[CODE_INDEX_READY] = "plain";
+    return false;
+  }
 }
 
 export default CodesModel;

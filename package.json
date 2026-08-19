@@ -17,7 +17,8 @@
     "format:check": "prettier --check \"**/*.{js,ts}\" \"*.json\"",
     "check": "npm run lint && npm run typecheck && npm test",
     "import:vo": "tsx scripts/importVoInfo.ts",
-    "migrate:prices": "tsx scripts/migratePrices.ts"
+    "migrate:prices": "tsx scripts/migratePrices.ts",
+    "dedupe:codes": "tsx scripts/dedupeCodes.ts"
   },
   "keywords": [],
   "author": "",

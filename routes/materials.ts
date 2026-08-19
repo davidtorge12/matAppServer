@@ -1,12 +1,28 @@
 import express from "express";
+import { listMaterialNames } from "../lib/materialNames.js";
 import { parsePrice } from "../lib/price.js";
 import { badRequest, route } from "../lib/route.js";
 import Material from "../schemas/Material.js";
 
 const router = express.Router();
 
+/** Ceiling so a bloated catalogue cannot dump the whole collection into the typeahead. */
+const MAX_CATALOGUE_NAMES = 2000;
+
 type GetPricesBody = { obj?: Record<string, unknown> };
 type SetPriceBody = { material?: unknown; price?: unknown };
+
+router.get(
+  "/materials",
+  route(async (_req, res) => {
+    const found = await Material.find({}, { material: 1, _id: 0 })
+      .sort({ material: 1 })
+      .limit(MAX_CATALOGUE_NAMES)
+      .lean();
+
+    res.json({ items: listMaterialNames(found) });
+  }),
+);
 
 /**
  * Prices for a whole materials list. One `$in` query, where the previous version
