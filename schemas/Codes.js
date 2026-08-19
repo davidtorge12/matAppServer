@@ -24,9 +24,43 @@ const codesSchema = new mongoose.Schema(
 // against them. See docs/REVIEW.md for the de-duplication step.
 codesSchema.index({ code: 1 });
 
-// Backs the `$text` search used by the VO matcher.
-codesSchema.index({ info: "text" });
+// Backs the `$text` search used by the VO matcher. Both the catalogue wording
+// (`info`) and the latest job-sheet wording (`description`) are searchable.
+codesSchema.index({ info: "text", description: "text" });
 
 const CodesModel = mongoose.model("Codes", codesSchema);
+
+const VO_INDEX_READY = Symbol.for("matapp.voSearchIndex");
+
+/**
+ * Mongo only allows one text index. The previous `{ info: "text" }` index must
+ * be dropped before the combined index can be created.
+ */
+export async function ensureVoSearchIndex() {
+  if (globalThis[VO_INDEX_READY]) {
+    return;
+  }
+
+  const indexes = await CodesModel.collection.indexes();
+  for (const index of indexes) {
+    const isText = Object.values(index.key).includes("text");
+    if (!isText) {
+      continue;
+    }
+    const coversDescription = index.weights && "description" in index.weights;
+    if (!coversDescription) {
+      try {
+        await CodesModel.collection.dropIndex(index.name);
+      } catch (error) {
+        if (error?.code !== 27 && error?.codeName !== "IndexNotFound") {
+          throw error;
+        }
+      }
+    }
+  }
+
+  await CodesModel.createIndexes();
+  globalThis[VO_INDEX_READY] = true;
+}
 
 export default CodesModel;

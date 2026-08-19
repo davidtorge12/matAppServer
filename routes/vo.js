@@ -2,6 +2,7 @@ import express from "express";
 import { MAX_VO_LINES } from "../lib/constants.js";
 import { mapWithConcurrency } from "../lib/concurrency.js";
 import { badRequest, route } from "../lib/route.js";
+import { pickBestCode } from "../lib/voMatch.js";
 import {
   formatVoLine,
   isMatchLine,
@@ -16,20 +17,30 @@ const router = express.Router();
 /** How many text searches to have in flight at once. */
 const SEARCH_CONCURRENCY = 5;
 
+/** How many catalogue hits to re-rank in the app. */
+const CANDIDATE_LIMIT = 20;
+
 async function bestMatchingCode(term) {
   if (!term) {
     return null;
   }
 
-  const [best] = await Codes.find(
+  const candidates = await Codes.find(
     { $text: { $search: term } },
-    { code: 1, score: { $meta: "textScore" } },
+    {
+      code: 1,
+      info: 1,
+      description: 1,
+      materials: 1,
+      updatedAt: 1,
+      score: { $meta: "textScore" },
+    },
   )
     .sort({ score: { $meta: "textScore" } })
-    .limit(1)
+    .limit(CANDIDATE_LIMIT)
     .lean();
 
-  return best?.code ?? null;
+  return pickBestCode(term, candidates);
 }
 
 router.post(
