@@ -1,7 +1,8 @@
 import js from "@eslint/js";
 import globals from "globals";
+import tseslint from "typescript-eslint";
 
-export default [
+export default tseslint.config(
   { ignores: ["node_modules"] },
   {
     ...js.configs.recommended,
@@ -13,12 +14,25 @@ export default [
     },
     rules: {
       ...js.configs.recommended.rules,
-      // Express error middleware must keep its four-argument shape even when the
-      // last one is unused, so an underscore marks the intent.
       "no-unused-vars": [
         "error",
         { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
       ],
     },
   },
-];
+  {
+    extends: [js.configs.recommended, ...tseslint.configs.recommended],
+    files: ["**/*.ts"],
+    languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: "module",
+      globals: globals.node,
+    },
+    rules: {
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
+      ],
+    },
+  },
+);

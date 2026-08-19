@@ -5,7 +5,7 @@ import fs from "fs";
 
 config();
 
-async function importVoInfo() {
+async function importVoInfo(): Promise<void> {
   const mongoUrl = process.env.MONGO_DB_URL;
   if (!mongoUrl) {
     throw new Error("MONGO_DB_URL is not set");
@@ -37,7 +37,7 @@ async function importVoInfo() {
   }
 }
 
-importVoInfo().catch((error) => {
+importVoInfo().catch((error: unknown) => {
   console.error("Error inserting data:", error);
   process.exit(1);
 });

@@ -5,6 +5,9 @@ import Material from "../schemas/Material.js";
 
 const router = express.Router();
 
+type GetPricesBody = { obj?: Record<string, unknown> };
+type SetPriceBody = { material?: unknown; price?: unknown };
+
 /**
  * Prices for a whole materials list. One `$in` query, where the previous version
  * ran a separate `find` for every name — a 40-material job meant 40 round trips
@@ -17,7 +20,7 @@ const router = express.Router();
 router.post(
   "/get-prices",
   route(async (req, res) => {
-    const requested = req.body?.obj;
+    const requested = (req.body as GetPricesBody | undefined)?.obj;
     if (!requested || typeof requested !== "object") {
       throw badRequest("expected { obj: { [material]: units } }");
     }
@@ -32,7 +35,7 @@ router.post(
       { material: 1, price: 1 },
     ).lean();
 
-    const prices = {};
+    const prices: Record<string, number> = {};
     for (const row of found) {
       prices[row.material] = parsePrice(row.price);
     }
@@ -44,7 +47,7 @@ router.post(
 router.post(
   "/set-price",
   route(async (req, res) => {
-    const { material, price } = req.body ?? {};
+    const { material, price } = (req.body ?? {}) as SetPriceBody;
     const name = typeof material === "string" ? material.trim() : "";
     if (!name) {
       throw badRequest("material required");
@@ -55,6 +58,10 @@ router.post(
       { price: parsePrice(price) },
       { upsert: true, new: true, lean: true },
     );
+
+    if (!updated) {
+      throw new Error("upsert returned no document");
+    }
 
     res.json({ material: updated.material, price: parsePrice(updated.price) });
   }),

@@ -2,21 +2,22 @@
   "name": "matappserver",
   "version": "1.0.0",
   "description": "Express + Mongo API for the materials takeoff tool.",
-  "main": "index.js",
+  "main": "index.ts",
   "type": "module",
   "engines": {
-    "node": ">=20"
+    "node": ">=24"
   },
   "scripts": {
-    "dev": "nodemon index.js",
-    "start": "node index.js",
-    "test": "node --test \"lib/*.test.js\" \"routes/*.test.js\" \"middleware/*.test.js\"",
+    "dev": "tsx watch index.ts",
+    "start": "tsx index.ts",
+    "test": "node --import tsx --test \"lib/*.test.ts\" \"routes/*.test.ts\" \"middleware/*.test.ts\"",
+    "typecheck": "tsc --noEmit",
     "lint": "eslint .",
-    "format": "prettier --write \"**/*.js\" \"*.json\"",
-    "format:check": "prettier --check \"**/*.js\" \"*.json\"",
-    "check": "npm run lint && npm test",
-    "import:vo": "node scripts/importVoInfo.js",
-    "migrate:prices": "node scripts/migratePrices.js"
+    "format": "prettier --write \"**/*.{js,ts}\" \"*.json\"",
+    "format:check": "prettier --check \"**/*.{js,ts}\" \"*.json\"",
+    "check": "npm run lint && npm run typecheck && npm test",
+    "import:vo": "tsx scripts/importVoInfo.ts",
+    "migrate:prices": "tsx scripts/migratePrices.ts"
   },
   "keywords": [],
   "author": "",
@@ -25,13 +26,18 @@
     "cors": "2.8.6",
     "dotenv": "16.6.1",
     "express": "4.22.2",
-    "mongoose": "8.24.3"
+    "mongoose": "8.24.3",
+    "tsx": "^4.21.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^4.17.25",
+    "@types/node": "^24.10.1",
     "eslint": "^10.8.1",
     "globals": "^17.11.0",
-    "nodemon": "^3.1.14",
-    "prettier": "^3.9.6"
+    "prettier": "^3.9.6",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.67.0"
   }
 }

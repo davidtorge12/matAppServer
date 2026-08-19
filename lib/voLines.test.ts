@@ -5,6 +5,7 @@ import {
   isMatchLine,
   joinVoLines,
   searchTermFor,
+  serializeVo,
   splitVoLines,
 } from "./voLines.js";
 
@@ -78,5 +79,38 @@ describe("formatVoLine", () => {
 describe("joinVoLines", () => {
   it("terminates every line, including the last", () => {
     assert.equal(joinVoLines(["a", "", "b"]), "a\n\nb\n");
+  });
+});
+
+describe("serializeVo", () => {
+  it("trims each row and prefixes a missing x marker", () => {
+    assert.equal(
+      serializeVo("  renew Bath panel  \n Bonding coat in patch"),
+      "x renew Bath panel\nx Bonding coat in patch",
+    );
+  });
+
+  it("keeps an existing marker and collapses extra spaces after it", () => {
+    assert.equal(serializeVo("x  renew Bath panel"), "x renew Bath panel");
+    assert.equal(serializeVo("X   Bonding coat"), "x Bonding coat");
+  });
+
+  it("does not add a second marker when the line is already marked", () => {
+    assert.equal(serializeVo("x renew Bath panel"), "x renew Bath panel");
+  });
+
+  it("leaves blank lines empty after trim", () => {
+    assert.equal(serializeVo("a\n  \nb"), "x a\n\nx b");
+  });
+
+  it("leaves a matched code prefix in place", () => {
+    assert.equal(
+      serializeVo("P1234 x renew Bath panel"),
+      "P1234 x renew Bath panel",
+    );
+    assert.equal(
+      serializeVo("  P1234  x   renew Bath panel  "),
+      "P1234 x renew Bath panel",
+    );
   });
 });

@@ -4,8 +4,12 @@
  * database operation per line at once, and instead of a plain `for await` loop so
  * it is not strictly sequential either.
  */
-export async function mapWithConcurrency(items, limit, mapper) {
-  const results = new Array(items.length);
+export async function mapWithConcurrency<T, R>(
+  items: readonly T[],
+  limit: number,
+  mapper: (item: T, index: number) => Promise<R>,
+): Promise<R[]> {
+  const results: R[] = new Array(items.length);
   let next = 0;
 
   const worker = async () => {

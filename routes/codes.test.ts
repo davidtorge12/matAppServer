@@ -63,7 +63,9 @@ describe("buildCodeUpserts", () => {
     ]);
 
     assert.equal(ops.length, 1);
-    assert.equal(ops[0].updateOne.update.$set.description, "second");
+    const op = ops[0];
+    assert.ok(op);
+    assert.equal(op.updateOne.update.$set?.description, "second");
   });
 
   it("leaves a stored description alone when the sheet cell is blank", () => {

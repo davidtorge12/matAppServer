@@ -16,7 +16,7 @@ export const MAX_PRICE = 1_000_000;
  * Unparseable input, negatives and non-finite values all become 0 rather than
  * poisoning a total.
  */
-export function parsePrice(value) {
+export function parsePrice(value: unknown): number {
   if (typeof value === "number") {
     return clamp(value);
   }
@@ -36,11 +36,11 @@ export function parsePrice(value) {
 }
 
 /** True when a stored value is already a clean number needing no migration. */
-export function isMigratedPrice(value) {
+export function isMigratedPrice(value: unknown): boolean {
   return typeof value === "number" && Number.isFinite(value) && value >= 0;
 }
 
-function clamp(value) {
+function clamp(value: number): number {
   if (!Number.isFinite(value) || value <= 0) {
     return 0;
   }

@@ -6,18 +6,48 @@ import Codes from "../schemas/Codes.js";
 
 const router = express.Router();
 
-function text(value) {
+export type CodeUploadRow = {
+  code?: unknown;
+  description?: unknown;
+  materials?: unknown;
+};
+
+export type CodeRow = {
+  code: string;
+  description: string;
+  materials: string;
+};
+
+type UpsertSet = { description?: string; materials?: string };
+type UpsertSetOnInsert = {
+  code: string;
+  description?: string;
+  materials?: string;
+};
+
+export type CodeUpsert = {
+  updateOne: {
+    filter: { code: string };
+    update: {
+      $set?: UpsertSet;
+      $setOnInsert: UpsertSetOnInsert;
+    };
+    upsert: true;
+  };
+};
+
+function text(value: unknown): string {
   return typeof value === "string" ? value.trim() : "";
 }
 
 /** Normalises the upload payload, dropping rows with no usable code. */
-export function normaliseCodes(body) {
+export function normaliseCodes(body: unknown): CodeRow[] {
   if (!Array.isArray(body)) {
     return [];
   }
 
   return body
-    .map((row) => ({
+    .map((row: CodeUploadRow) => ({
       code: text(row?.code),
       description: text(row?.description),
       materials: text(row?.materials),
@@ -36,15 +66,15 @@ export function normaliseCodes(body) {
  * the previous behaviour of never clearing a stored description or materials
  * list with an empty cell from a spreadsheet.
  */
-export function buildCodeUpserts(rows) {
-  const byCode = new Map();
+export function buildCodeUpserts(rows: CodeRow[]): CodeUpsert[] {
+  const byCode = new Map<string, CodeRow>();
   for (const row of rows) {
     byCode.set(row.code, row);
   }
 
   return [...byCode.values()].map((row) => {
-    const set = {};
-    const setOnInsert = { code: row.code };
+    const set: UpsertSet = {};
+    const setOnInsert: UpsertSetOnInsert = { code: row.code };
 
     if (row.description) {
       set.description = row.description;
@@ -65,11 +95,13 @@ export function buildCodeUpserts(rows) {
           ...(Object.keys(set).length ? { $set: set } : {}),
           $setOnInsert: setOnInsert,
         },
-        upsert: true,
+        upsert: true as const,
       },
     };
   });
 }
+
+type CodeUpdateBody = { param?: { id?: unknown; materials?: unknown } };
 
 router.post(
   "/codes",
@@ -98,7 +130,7 @@ router.post(
   }),
 );
 
-export function parsePage(value) {
+export function parsePage(value: unknown): number {
   const page = Number.parseInt(String(value ?? "1"), 10);
   return Number.isInteger(page) && page > 0 ? page : 1;
 }
@@ -123,7 +155,7 @@ router.get(
 router.post(
   "/code",
   route(async (req, res) => {
-    const { id, materials } = req.body?.param ?? {};
+    const { id, materials } = (req.body as CodeUpdateBody | undefined)?.param ?? {};
     if (!id) {
       throw badRequest("id required");
     }

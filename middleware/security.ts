@@ -1,7 +1,8 @@
 import { timingSafeEqual } from "node:crypto";
-import cors from "cors";
+import cors, { type CorsOptions } from "cors";
+import type { Express, RequestHandler } from "express";
 
-export function normalizeOrigin(value) {
+export function normalizeOrigin(value: unknown): string {
   if (typeof value !== "string") {
     return "";
   }
@@ -17,18 +18,21 @@ export function normalizeOrigin(value) {
   return origin.replace(/\/+$/, "");
 }
 
-export function parseOrigins(value) {
+export function parseOrigins(value: string | undefined): string[] {
   return (value || "")
     .split(",")
     .map((origin) => normalizeOrigin(origin))
     .filter(Boolean);
 }
 
-export function corsOrigins() {
+export function corsOrigins(): string[] {
   return parseOrigins(process.env.CORS_ORIGIN);
 }
 
-export function originAllowed(requestOrigin, configured = process.env.CORS_ORIGIN) {
+export function originAllowed(
+  requestOrigin: string | undefined,
+  configured: string | undefined = process.env.CORS_ORIGIN,
+): boolean {
   const allowed = parseOrigins(configured);
   if (!allowed.length || allowed.includes("*")) {
     return true;
@@ -45,7 +49,9 @@ export function originAllowed(requestOrigin, configured = process.env.CORS_ORIGI
  * gets `Access-Control-Allow-Origin`. An empty list or `*` uses cors defaults
  * (`origin: '*'`) instead.
  */
-export function corsConfig(value = process.env.CORS_ORIGIN) {
+export function corsConfig(
+  value: string | undefined = process.env.CORS_ORIGIN,
+): CorsOptions {
   const allowed = parseOrigins(value);
   if (!allowed.length || allowed.includes("*")) {
     return {};
@@ -53,7 +59,7 @@ export function corsConfig(value = process.env.CORS_ORIGIN) {
   return { origin: allowed };
 }
 
-export function applyCors(app) {
+export function applyCors(app: Express): void {
   const allowed = corsOrigins();
 
   if (!allowed.length) {
@@ -74,7 +80,7 @@ export function applyCors(app) {
 }
 
 /** Constant-time compare, so a wrong key cannot be narrowed down byte by byte. */
-function matches(provided, expected) {
+function matches(provided: unknown, expected: string): boolean {
   if (typeof provided !== "string") {
     return false;
   }
@@ -84,10 +90,10 @@ function matches(provided, expected) {
   return a.length === b.length && timingSafeEqual(a, b);
 }
 
-export function requireApiKey(req, res, next) {
+export const requireApiKey: RequestHandler = (req, res, next) => {
   const expected = process.env.API_KEY;
 
-  // Fail closed. `index.js` answers 503 for every route when the key is missing,
+  // Fail closed. `index.ts` answers 503 for every route when the key is missing,
   // so reaching here without one means something is badly misconfigured — never
   // wave the request through.
   if (!expected) {
@@ -99,4 +105,4 @@ export function requireApiKey(req, res, next) {
   }
 
   return res.status(401).json({ error: "unauthorized" });
-}
+};

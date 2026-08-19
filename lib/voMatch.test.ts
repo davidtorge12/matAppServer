@@ -1,8 +1,8 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
-import { pickBestCode } from "./voMatch.js";
+import { pickBestCode, type VoCandidate } from "./voMatch.js";
 
-function candidate(overrides) {
+function candidate(overrides: Partial<VoCandidate>): VoCandidate {
   return {
     code: "000000",
     info: "",

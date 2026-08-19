@@ -26,11 +26,17 @@ const APPLY = process.argv.includes("--apply");
 /** How many examples to print, so a dry run stays readable on a long collection. */
 const SAMPLE_SIZE = 20;
 
-function describe(value) {
+function describe(value: unknown): string {
   return `${JSON.stringify(value)} (${typeof value})`;
 }
 
-async function migratePrices() {
+type StalePriceRow = {
+  _id: mongoose.Types.ObjectId;
+  material: string;
+  price: unknown;
+};
+
+async function migratePrices(): Promise<void> {
   const mongoUrl = process.env.MONGO_DB_URL;
   if (!mongoUrl) {
     throw new Error("MONGO_DB_URL is not set");
@@ -43,10 +49,10 @@ async function migratePrices() {
     const total = await collection.countDocuments({});
 
     // Anything not already a BSON number: strings, nulls, and missing fields.
-    const stale = await collection
+    const stale = (await collection
       .find({ price: { $not: { $type: "number" } } })
       .project({ material: 1, price: 1 })
-      .toArray();
+      .toArray()) as StalePriceRow[];
 
     console.log(`${total} material rows, ${stale.length} needing conversion.`);
 
@@ -113,7 +119,7 @@ async function migratePrices() {
   }
 }
 
-migratePrices().catch((error) => {
+migratePrices().catch((error: unknown) => {
   console.error("Price migration failed:", error);
   process.exit(1);
 });

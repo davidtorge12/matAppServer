@@ -6,6 +6,15 @@
  * the empty one is a closer string match.
  */
 
+export type VoCandidate = {
+  code?: string | null;
+  info?: string | null;
+  description?: string | null;
+  materials?: string | null;
+  updatedAt?: Date | string | null;
+  score?: number | null;
+};
+
 const STOP_WORDS = new Set([
   "a",
   "an",
@@ -20,20 +29,20 @@ const STOP_WORDS = new Set([
   "with",
 ]);
 
-function normalise(value) {
+function normalise(value: unknown): string {
   return String(value ?? "")
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, " ")
     .trim();
 }
 
-function tokens(value) {
+function tokens(value: string): string[] {
   return normalise(value)
     .split(" ")
     .filter((word) => word && !STOP_WORDS.has(word));
 }
 
-function jaccard(left, right) {
+function jaccard(left: string[], right: string[]): number {
   if (!left.length || !right.length) {
     return 0;
   }
@@ -45,7 +54,7 @@ function jaccard(left, right) {
 }
 
 /** Higher is closer. Exact / contained wording outranks token overlap. */
-function wordingScore(term, text) {
+function wordingScore(term: string, text: unknown): number {
   const needle = normalise(term);
   const haystack = normalise(text);
   if (!needle || !haystack) {
@@ -60,18 +69,18 @@ function wordingScore(term, text) {
   return jaccard(tokens(needle), tokens(haystack));
 }
 
-function closeness(term, candidate) {
+function closeness(term: string, candidate: VoCandidate): number {
   return Math.max(
     wordingScore(term, candidate.info),
     wordingScore(term, candidate.description),
   );
 }
 
-function hasMaterials(candidate) {
+function hasMaterials(candidate: VoCandidate): boolean {
   return Boolean(candidate.materials && String(candidate.materials).trim());
 }
 
-function updatedAtMs(candidate) {
+function updatedAtMs(candidate: VoCandidate): number {
   const value = candidate.updatedAt;
   if (!value) {
     return 0;
@@ -80,7 +89,7 @@ function updatedAtMs(candidate) {
   return Number.isFinite(ms) ? ms : 0;
 }
 
-function compareCandidates(term, a, b) {
+function compareCandidates(term: string, a: VoCandidate, b: VoCandidate): number {
   const materials = Number(hasMaterials(b)) - Number(hasMaterials(a));
   if (materials) {
     return materials;
@@ -99,7 +108,10 @@ function compareCandidates(term, a, b) {
   return (b.score ?? 0) - (a.score ?? 0);
 }
 
-export function pickBestCode(term, candidates) {
+export function pickBestCode(
+  term: string,
+  candidates: VoCandidate[] | null | undefined,
+): string | null {
   if (!term || !String(term).trim() || !candidates?.length) {
     return null;
   }

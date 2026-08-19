@@ -18,7 +18,7 @@ const isProduction = process.env.NODE_ENV === "production";
  * that returns no HTTP response at all, which the browser reports only as
  * "Failed to fetch". A misconfigured deploy has to answer with something readable.
  */
-const fatalConfigErrors = [];
+const fatalConfigErrors: string[] = [];
 
 if (!process.env.API_KEY) {
   // Fatal: serving an unauthenticated API is worse than being unavailable.
@@ -72,7 +72,7 @@ app.use((_req, res) => {
 });
 app.use(errorHandler);
 
-async function start() {
+async function start(): Promise<void> {
   const port = process.env.PORT || 3000;
 
   // Failing fast is useful here and only here: a local run is a long-lived process
@@ -98,7 +98,7 @@ async function start() {
 // (and process.exit on a failed Mongo connect) races the handler and shows up
 // as FUNCTION_INVOCATION_FAILED on otherwise healthy routes.
 if (!process.env.VERCEL) {
-  start();
+  void start();
 }
 
 export default app;

@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import type { RequestHandler } from "express";
 import { ensureVoSearchIndex } from "../schemas/Codes.js";
 
 /**
@@ -10,14 +11,22 @@ import { ensureVoSearchIndex } from "../schemas/Codes.js";
  */
 const CACHE_KEY = Symbol.for("matapp.mongoose");
 
-function cache() {
-  if (!globalThis[CACHE_KEY]) {
-    globalThis[CACHE_KEY] = { conn: null, promise: null };
+type DbCache = {
+  conn: typeof mongoose | null;
+  promise: Promise<typeof mongoose> | null;
+};
+
+function cache(): DbCache {
+  const store = globalThis as Record<symbol, DbCache | undefined>;
+  if (!store[CACHE_KEY]) {
+    store[CACHE_KEY] = { conn: null, promise: null };
   }
-  return globalThis[CACHE_KEY];
+  return store[CACHE_KEY];
 }
 
-export async function connectDb(mongoUrl = process.env.MONGO_DB_URL) {
+export async function connectDb(
+  mongoUrl: string | undefined = process.env.MONGO_DB_URL,
+): Promise<typeof mongoose> {
   if (!mongoUrl) {
     throw new Error("MONGO_DB_URL is not set");
   }
@@ -39,7 +48,7 @@ export async function connectDb(mongoUrl = process.env.MONGO_DB_URL) {
         console.log("MongoDB connected");
         return connection;
       })
-      .catch((error) => {
+      .catch((error: unknown) => {
         // Drop the rejected promise so the next request retries rather than
         // replaying the same failure for the life of the instance.
         store.promise = null;
@@ -57,6 +66,6 @@ export async function connectDb(mongoUrl = process.env.MONGO_DB_URL) {
  * on a serverless host nothing runs `start()` — the platform imports the app
  * and calls it per request.
  */
-export function withDb(_req, _res, next) {
+export const withDb: RequestHandler = (_req, _res, next) => {
   connectDb().then(() => next(), next);
-}
+};
