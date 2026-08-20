@@ -5,7 +5,7 @@
   "main": "index.ts",
   "type": "module",
   "engines": {
-    "node": ">=24"
+    "node": "24.x"
   },
   "scripts": {
     "dev": "tsx watch index.ts",
